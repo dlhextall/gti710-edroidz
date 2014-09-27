@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/sticky-footer.css" rel="stylesheet">
+        <!-- Custom styles -->
+        <link href="css/general.css" rel="stylesheet">
+        <link href="css/carousel.css" rel="stylesheet">
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+          <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        
+        <title>Panier</title>        
+    </head>
+
+    <body>
+     <!-- Header image -->
+        <a href="" >
+            <div class="header-image container"></div>
+        </a>
+        <!-- Navbar -->
+        <div class="navbar navbar-default" role="navigation">
+            <div class="container">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-b"></span>
+                            <span class="icon-b"></span>
+                            <span class="icon-b"></span>
+                        </button>
+                        <a href="index.html" class="navbar-brand">eDroidz</a>
+                    </div>
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li><a href="catalogue.html">Catalogue</a></li>
+                            <li><a href="panier.html">Panier <span  id="panier" class="badge"></span></a></li>
+                        </ul>
+                        <form action="/ticketz/recherche" method="get" class="nav navbar-form navbar-right">
+                            <div id="the-basics" class="form-group">
+                                <input type="text" id="searching" name="criteria"  class="form-control typeahead" placeholder="Search" data-provide="typeahead" autocomplete="off">
+                            </div>
+                            <button class="btn btn-default">Rechercher</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+	  
+	  	<div class="container">
+	      	<div class="row">
+	      		<form action="checkout.html" class="form-horizontal" role="form">
+	      		
+		          	
+	          		<table class="table table-hover">
+					    <thead>
+					        <tr>
+				               <th>Product</th>
+				               <th>Quantity</th>
+				               <th class="text-center">Price</th>
+				               <th class="text-center">Total</th>
+				               <th> </th>
+					        </tr>
+				        </thead>
+					    
+					    <tbody>			          		
+				            <tr>
+				              <td class="col-sm-8 col-md-6">
+				                <div class="media">
+				                  <a class="thumbnail pull-left" href="#"> <img class="media-object" src="http://icons.iconarchive.com/icons/visualpharm/icons8-metro-style/128/Data-Ticket-icon.png" style="width: 72px; height: 72px;"> </a>
+				                  <div class="media-body">
+				                   <h4 class="media-heading"><a href="/ticketz/detail?id=1">Osheaga</a></h4>
+				                   <span>Status: </span><span class="text-success"><strong>In Stock</strong></span>
+				                  </div>
+				                </div>
+				              </td>
+				              <td class="col-sm-1 col-md-1" style="text-align: center">
+				                <label  class="form-control" id="exampleInputEmail1" value="2">2</label>
+				              </td>
+				              <td class="col-sm-1 col-md-1 text-center"><strong> 199</strong></td>
+				              <td class="col-sm-1 col-md-1 text-center"><strong>398</strong></td>
+				              <td class="col-sm-1 col-md-1">
+				              <a href="/ticketz/panier/delete?id=0&idR=0&idS=1" type="button" class="btn btn-danger">
+				                <span class="glyphicon glyphicon-remove"></span> Remove
+				              </a></td>
+				            </tr>
+				           
+				            <tr>
+				              <td class="col-sm-8 col-md-6">
+				                <div class="media">
+				                  <a class="thumbnail pull-left" href="#"> <img class="media-object" src="http://icons.iconarchive.com/icons/visualpharm/icons8-metro-style/128/Data-Ticket-icon.png" style="width: 72px; height: 72px;"> </a>
+				                  <div class="media-body">
+				                   <h4 class="media-heading"><a href="/ticketz/detail?id=1">Osheaga</a></h4>
+				                   <span>Status: </span><span class="text-success"><strong>In Stock</strong></span>
+				                  </div>
+				                </div>
+				              </td>
+				              <td class="col-sm-1 col-md-1" style="text-align: center">
+				                <label  class="form-control" id="exampleInputEmail1" value="3">3</label>
+				              </td>
+				              <td class="col-sm-1 col-md-1 text-center"><strong> 199</strong></td>
+				              <td class="col-sm-1 col-md-1 text-center"><strong>597</strong></td>
+				              <td class="col-sm-1 col-md-1">
+				              <a href="/ticketz/panier/delete?id=1&idR=0&idS=1" type="button" class="btn btn-danger">
+				                <span class="glyphicon glyphicon-remove"></span> Remove
+				              </a></td>
+				            </tr>
+				           
+					            <tr>
+					             <td>   </td>
+					             <td>   </td>
+					             <td>   </td>
+					             <td><h5>Subtotal</h5></td>
+					             <td class="text-right"><h5><strong>995</strong></h5></td>
+					            </tr>
+					            
+					            <tr>
+					             <td>   </td>
+					             <td>   </td>
+					             <td>   </td>
+					             <td><h3>Total</h3></td>
+					             <td class="text-right"><h3><strong>1148.96</strong></h3></td>
+					            </tr>
+					            <tr>
+					             <td>   </td>
+					             <td>   </td>
+					             <td>   </td>
+					             <td>
+					              <a href="catalogue.html"><button  type="button" class="btn btn-default"><span class="glyphicon glyphicon-shopping-cart"></span> Continue Shopping</button></a>
+					             </td>
+					             <td>
+					              <button type="submit" class="btn btn-success">Checkout <span class="glyphicon glyphicon-play"></span></button>
+					            </td>
+				            </tr>
+					               
+			          	</tbody>
+			       	</table>
+		        
+	      		</form>
+		        
+	      	</div>
+	  	</div>	       
+	
+		
+
+
+
+		<!-- Footer -->
+		<div id="footer">
+		    <div class="container">
+		        <p class="text-muted">Tous droits réservés, Ticketz™.</p>
+		    </div>
+		</div>
+		
+
+
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+
+        <!-- Custom javascript -->
+        
+	        
+	</body>
+</html>

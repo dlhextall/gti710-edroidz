@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/sticky-footer.css" rel="stylesheet">
+        <!-- Custom styles -->
+        <link href="css/general.css" rel="stylesheet">
+        <link href="css/carousel.css" rel="stylesheet">
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+          <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        
+        <title>Détails</title>        
+    </head>
+
+    <body>
+     <!-- Header image -->
+        <a href="" >
+            <div class="header-image container"></div>
+        </a>
+        <!-- Navbar -->
+        <div class="navbar navbar-default" role="navigation">
+            <div class="container">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-b"></span>
+                            <span class="icon-b"></span>
+                            <span class="icon-b"></span>
+                        </button>
+                        <a href="index.html" class="navbar-brand">eDroidz</a>
+                    </div>
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li><a href="catalogue.html">Catalogue</a></li>
+                            <li><a href="panier.html">Panier <span  id="panier" class="badge"></span></a></li>
+                        </ul>
+                        <form action="/ticketz/recherche" method="get" class="nav navbar-form navbar-right">
+                            <div id="the-basics" class="form-group">
+                                <input type="text" id="searching" name="criteria"  class="form-control typeahead" placeholder="Search" data-provide="typeahead" autocomplete="off">
+                            </div>
+                            <button class="btn btn-default">Rechercher</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <!-- Show preview -->
+        <div class="row show-preview">
+            <div class="container">
+                <div class="col-md-6">
+                    <h2>Osheaga</h2>
+                    <h4>Du 01 août au 03 août 2014</h4>
+                    <h3>Parc Jean-Drapeau</h3>
+                    <h4>1 Circuit Gilles Villeneuve, Montréal, QC</h4>
+                </div>
+                <div class="col-md-6">
+                    <img src="http://i.imgur.com/wKsqNa4.jpg" width="291px" height="350px">
+                </div>
+            </div>
+        </div>
+
+        <!-- Show details -->
+        <div class="row show-details">
+            <div class="container">
+                <h2>Détails</h2>
+                <div class="col-md-12">
+                	<h3>Description</h3>
+                    <p>Edgy festival.</p>
+                </div>
+                <div class="col-md-12">
+                	<h3>Artistes</h3>
+                    <div class="list-group">
+                    	
+                    	<a href="#" class="list-group-item">
+                    		<h4 class="list-group-item-heading">The Black Keys</h4>
+                    		<p class="list-group-item-text">The Black Keys is an American rock duo formed in Akron, Ohio in 2001. The group consists of Dan Auerbach (guitar, vocals) and Patrick Carney (drums). The duo began as an independent act, recording music in basements and self-producing their records, before they eventually emerged as one of the most popular garage rock artists during a second wave of the genre&#039;s revival in the 2010s. The band&#039;s raw blues rock sound draws heavily from Auerbach&#039;s blues influences, including Junior Kimbrough, Howlin&#039; Wolf, and Robert Johnson.</p>
+                    	</a>
+                    	
+                    	
+                    	
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ticket option -->
+        <div class="row show-buying">
+            <div class="container form-horizontal">
+                <h2>Achat</h2>
+                	<!-- <form action="/ticketz/panier/add" class="form-horizontal" role="form"> -->
+	                    <div class="form-group">
+	                        <label for="nbTickets" class="col-sm-4 control-label">Nombre de billets</label>
+	                        <div class="col-sm-6">
+	                            <select name="nbTickets" id="nbTickets" class="form-control">
+	                                <option value="1">1</option>
+	                                <option value="2">2</option>
+	                                <option value="3">3</option>
+	                                <option value="4">4</option>
+	                            </select>
+	                        </div>
+	                    </div>
+	                    <!-- <div class="form-group">
+	                        <label for="showDate" class="col-sm-4 control-label">Date du spectacle</label>
+	                        <div class="col-sm-6">
+	                            <select name="showDate" id="showDate" class="form-control">
+	                                <option value="1">January 1st</option>
+	                                <option value="2">January 2nd</option>
+	                            </select>
+	                        </div>
+	                    </div> -->
+	                   
+	                    <div class="form-group">
+	                        <label for="totalPrice" class="col-sm-4 control-label">Total</label>
+	                        <div class="col-sm-6">
+	                            <input name="totalPrice" id='totalPrice' type="text" class="form-control" value="199,99" readonly>
+	                            <input type="hidden" id='idSpectacle' name="idSpectacle" value="1">
+	                            <input type="hidden" id='unityPrice' name="unityPrice" value="199.99">
+	                            <input type="hidden" id='nomSpectacle' name="nomSpectacle" value="Osheaga">
+	                            <input type="hidden" id='nomBilletPanier' name="nomBilletPanier" value="">
+	                        </div>
+	                    </div>
+	                    <div class="clearfix"></div>
+	                    <div class="col-md-10 text-right">
+	                        <button type="submit" id='form_btn' class="btn btn-default">Ajouter au panier</button>                       
+	                    </div>
+                   <!-- </form> -->
+                
+            </div>
+        </div>
+
+
+		
+
+
+
+<!-- Footer -->
+<div id="footer">
+    <div class="container">
+        <p class="text-muted">Tous droits réservés, Ticketz™.</p>
+    </div>
+</div>
+        
+
+
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+
+        <!-- Custom javascript -->
+        <script src="js/checkout.js"></script>
+        
+	</body>
+</html>
