@@ -63,3 +63,171 @@
 .tt-suggestion p {
 	margin: 0;
 }
+
+/*----------- Changement Alex -----------*/
+  
+.description {
+	min-width: 140px;
+	max-width: 360px;
+}
+
+p.indexPrice {
+	font-weight: bold;
+}
+
+.decalage {
+	padding-left: 0px;
+	margin-left: 0px;
+}
+
+.col-md-6 h4 {
+	padding-top : 2px;
+}
+
+.skills {
+	border-top: 1px solid #dddddd; 
+	border-bottom: 1px solid #dddddd;
+}
+.skill {
+	height: 40px;
+	width: 100%;
+	display: inline-block;
+}
+
+.skill img{
+	float:left;
+}
+
+.skillOn {
+	font-size: 16px;
+	float: left;
+	padding-top: 12px;
+	margin-left: 25px;
+}
+
+.skillOff {
+	color: grey;
+	font-size: 16px;
+	float: left;
+	padding-top: 12px;
+	margin-left: 25px;
+}
+
+#userComment {
+	resize: none;
+	width: 100%;
+	height: 94px;
+	color: #555555;
+	margin: 10px 0px;
+	padding: 6px 12px;
+}
+
+.rating {
+	float: left;
+	margin: 8px 0px 0px 250px;
+}
+
+#note {
+	padding-right: 20px;
+}
+
+.oldComment {
+	width: 78%;
+	resize: none;
+	height: 60px;
+	padding: 6px 12px;
+	color: #555555;
+	background-color: transparent;
+	border: none;	
+}
+
+.oldCommentContainer {
+	padding-top: 5px;
+	border-top: 1px solid #dddddd; 
+}
+
+.rating2 {
+	float: right;
+	margin: 18px 20px 0px 0px;
+}
+
+.comment {
+	margin-bottom: 20px;
+}
+
+/*------------------  Star rating ------------------ */
+#hideStars {
+    display:none;
+}
+ 
+.rating input {
+    position:absolute;
+    filter:alpha(opacity=0);
+    -moz-opacity:0;
+    -khtml-opacity:0;
+    opacity:0;
+    cursor:pointer;
+    width:17px;
+}
+
+.rating span {
+    width:24px;
+    height:16px;
+    line-height:16px;
+    padding:1px 22px 1px 0; /* 1px FireFox fix */
+    background:url(http://www.d-k-j.com/Articles/Web_Development/Pure_CSS_5_Star_Rating_System_with_Radios/stars.png) no-repeat -22px 0;
+}
+
+/* Change span immediately following the checked radio */
+
+.rating input:checked + span {
+    background-position:-22px 0;
+}
+
+/* Reset all remaining stars back to default background.
+   This supersedes the above due to its ordering. */
+
+.rating input:checked + span ~ span {
+    background-position:0 0;
+}
+
+.rating2 input {
+    position:absolute;
+    filter:alpha(opacity=0);
+    -moz-opacity:0;
+    -khtml-opacity:0;
+    opacity:0;
+    cursor:pointer;
+    width:17px;
+}
+
+.rating2 span {
+    width:24px;
+    height:16px;
+    line-height:16px;
+    padding:1px 22px 1px 0; /* 1px FireFox fix */
+    background:url(http://www.d-k-j.com/Articles/Web_Development/Pure_CSS_5_Star_Rating_System_with_Radios/stars.png) no-repeat -22px 0;
+}
+
+/* Change span immediately following the checked radio */
+
+.rating2 input:checked + span {
+    background-position:-22px 0;
+}
+
+/* Reset all remaining stars back to default background.
+   This supersedes the above due to its ordering. */
+
+.rating2 input:checked + span ~ span {
+    background-position:0 0;
+}
+
+.jshover {
+    background-position:-22px 0;
+}
+
+.jshoverNext {
+    background-position:0 0;
+}
+
+/*------------------  Star rating END ------------------ */
