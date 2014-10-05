@@ -19,7 +19,7 @@ public class CatalogueController {
 	 * Simply selects the home view to render by returning its name.
 	 */
 	@RequestMapping(value = "/catalogue", method = RequestMethod.GET)
-	public String detail(Locale locale, Model model) {			
+	public String catalogue(Locale locale, Model model) {			
 		return "Catalogue";
 	}
 }
