@@ -73,7 +73,7 @@
             <div class="carousel-inner">
               
                 <div class="item active">
-                    <img src="images\carousel\img2.jpg" alt="Osheaga">
+                    <img src="<c:url value="/resources/images\carousel\img2.jpg" />" alt="Osheaga">
                     <div class="container">
                         <div class="carousel-caption">
                             <h1>Androïde DrZ60</h1>
@@ -86,7 +86,7 @@
                 </div>
               
                 <div class="item">
-                    <img src="images\carousel\img1.jpg" alt="The Summer Slaughter Tour">
+                    <img src="<c:url value="/resources/images\carousel\img1.jpg" />" alt="The Summer Slaughter Tour">
                     <div class="container">
                         <div class="carousel-caption">
                             <h1>The Summer Slaughter Tour</h1>
@@ -98,7 +98,7 @@
                 </div>
 
                  <div class="item">
-                    <img src="images\carousel\img3.jpg" alt="The Summer Slaughter Tour">
+                    <img src="<c:url value="/resources/images\carousel\img3.jpg" />" alt="The Summer Slaughter Tour">
                     <div class="container">
                         <div class="carousel-caption">
                             <h1>Balix rulez</h1>
@@ -110,7 +110,7 @@
                 </div>
 
                  <div class="item">
-                    <img src="images\carousel\img4.jpg" alt="The Summer Slaughter Tour">
+                    <img src="<c:url value="/resources/images\carousel\img4.jpg" />" alt="The Summer Slaughter Tour">
                     <div class="container">
                         <div class="carousel-caption">
                             <h1>Alex suit de pres</h1>
@@ -151,9 +151,9 @@
 
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
+        <script src="<c:url value="/resources/js/bootstrap.min.js" />"></script>
 
         <!-- Custom javascript -->
-        <script src="js/carousel.js"></script>
+        <script src="<c:url value="/resources/js/carousel.js" />"></script>
     </body>
 </html>
