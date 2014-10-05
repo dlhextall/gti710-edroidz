@@ -1,14 +1,159 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ page session="false" %>
-<html>
-<head>
-	<title>Home</title>
-</head>
-<body>
-<h1>
-	Hello world!  
-</h1>
+<%@ page contentType="text/html; charset=UTF-8" %>
+<%@ page session="true" %>
 
-<P>  The time on the server is ${serverTime}. </P>
-</body>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Bootstrap -->
+        <link href="<c:url value="/resources/css/bootstrap.min.css" />" rel="stylesheet">
+        <link href="<c:url value="/resources/css/sticky-footer.css" />" rel="stylesheet">
+        <!-- Custom styles -->
+        <link href="<c:url value="/resources/css/general.css" />" rel="stylesheet">
+        <link href="<c:url value="/resources/css/carousel.css" />" rel="stylesheet">        
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+          <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        
+        <title>eDroidz</title>        
+    </head>
+
+    <body>
+        <!-- Header image -->
+        <a href="" >
+            <div class="header-image container"></div>
+        </a>
+        <!-- Navbar -->
+        <div class="navbar navbar-default" role="navigation">
+            <div class="container">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-b"></span>
+                            <span class="icon-b"></span>
+                            <span class="icon-b"></span>
+                        </button>
+                        <a href="index.html" class="navbar-brand">eDroidz</a>
+                    </div>
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li><a href="catalogue.html">Catalogue</a></li>
+                            <li><a href="panier.html">Panier <span  id="panier" class="badge"></span></a></li>
+                        </ul>
+                        <form action="/ticketz/recherche" method="get" class="nav navbar-form navbar-right">
+                            <div id="the-basics" class="form-group">
+                                <input type="text" id="searching" name="criteria"  class="form-control typeahead" placeholder="Rechercher" data-provide="typeahead" autocomplete="off">
+                            </div>
+                            <button class="btn btn-default">Rechercher</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carousel -->
+        
+        <div id="featuredShows" class="carousel slide" data-interval="false">
+            <ol class="carousel-indicators">
+              
+                <li data-target="#featuredShows" data-slide-to="0" class="active"></li>              
+                <li data-target="#featuredShows" data-slide-to="1" class=""></li>
+                <li data-target="#featuredShows" data-slide-to="2" class=""></li>
+                <li data-target="#featuredShows" data-slide-to="3" class=""></li>
+              
+            </ol>
+            <div class="carousel-inner">
+              
+                <div class="item active">
+                    <img src="images\carousel\img2.jpg" alt="Osheaga">
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <h1>Androïde DrZ60</h1>
+                            <div class="description">
+                                <p>Description DrZ60 blablabla testtt testtt testtt testtt testtt testtt testtt testtt testtt testtt testtt testtt testtt testtt testtt testtt testtt etc</p>
+                                <p class="indexPrice">20345$</p>
+                            </div>                           
+                        </div>
+                    </div>
+                </div>
+              
+                <div class="item">
+                    <img src="images\carousel\img1.jpg" alt="The Summer Slaughter Tour">
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <h1>The Summer Slaughter Tour</h1>
+                            <div class="description">
+                                <p>Next level brutalness.</p>
+                            </div>                            
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="item">
+                    <img src="images\carousel\img3.jpg" alt="The Summer Slaughter Tour">
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <h1>Balix rulez</h1>
+                            <div class="description">
+                                <p>Next level brutalness.</p>
+                            </div>                            
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="item">
+                    <img src="images\carousel\img4.jpg" alt="The Summer Slaughter Tour">
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <h1>Alex suit de pres</h1>
+                            <div class="description">
+                                <p>Next level brutalness.</p>
+                            </div>                            
+                        </div>
+                    </div>
+                </div>
+              
+            </div>
+            <a class="left carousel-control" href="#featuredShows" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+            <a class="right carousel-control" href="#featuredShows" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+        </div>
+    
+        <!-- feature info -->
+        <div id="featuredInfo" class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <h1></h1>
+                </div>
+                <div class="col-md-4">
+                    <!--<h3 class="text-right">
+                        <small>Du <strong id="date-start"> 24 Avril</strong> au <strong id="date-end">24 Juin</strong></small>
+                    </h3>-->
+                </div>
+            </div>
+            <div class="description"></div>
+            <p class="text-right"><a href="detail.html" class="btn btn-default show-id">Détails</a></p>
+        </div>
+
+        <!-- Footer -->
+        <div id="footer">
+            <div class="container">
+                <p class="text-muted">Tous droits réservés, eDroidz™.</p>
+            </div>
+        </div>
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+
+        <!-- Custom javascript -->
+        <script src="js/carousel.js"></script>
+    </body>
 </html>
