@@ -41,14 +41,14 @@
                             <span class="icon-b"></span>
                             <span class="icon-b"></span>
                         </button>
-                        <a href="index.html" class="navbar-brand">eDroidz</a>
+                        <a href="/edroidz/" class="navbar-brand">eDroidz</a>
                     </div>
                     <div class="navbar-collapse collapse">
                         <ul class="nav navbar-nav">
-                            <li><a href="catalogue.html">Catalogue</a></li>
-                            <li><a href="panier.html">Panier <span  id="panier" class="badge"></span></a></li>
+                            <li><a href="/edroidz/catalogue">Catalogue</a></li>
+                            <li><a href="/edroidz/panier">Panier <span  id="panier" class="badge"></span></a></li>
                         </ul>
-                        <form action="/ticketz/recherche" method="get" class="nav navbar-form navbar-right">
+                        <form action="/edroidz/catalogue" method="get" class="nav navbar-form navbar-right">
                             <div id="the-basics" class="form-group">
                                 <input type="text" id="searching" name="criteria"  class="form-control typeahead" placeholder="Rechercher" data-provide="typeahead" autocomplete="off">
                             </div>
@@ -139,7 +139,7 @@
                 </div>
             </div>
             <div class="description"></div>
-            <p class="text-right"><a href="detail.html" class="btn btn-default show-id">Détails</a></p>
+            <p class="text-right"><a href="/edroidz/detail" class="btn btn-default show-id">Détails</a></p>
         </div>
 
         <!-- Footer -->
