@@ -9,9 +9,7 @@ public class Droid
 	private double price;
 	private String name;
 	private String description;
-	private String imageThumb;
-	private String imageDetail;
-	private String imageBig;	
+	private String imageName;
 	private ArrayList<Comment> commentsList;	
 	
 	//Skills
@@ -23,17 +21,15 @@ public class Droid
 	private boolean canWashDishes;
 	
 	public Droid(int id, int quantityAvailable, double price, String name, 
-			String description, String imageThumb, String imageDetail, String imageBig, 
-			ArrayList<Comment> commentsList, boolean canCombat, boolean canCook, boolean canGarden, 
+			String description, String imageName, ArrayList<Comment> commentsList, 
+			boolean canCombat, boolean canCook, boolean canGarden, 
 			boolean canLaundry, boolean canClean, boolean canWashDishes ) {
 		this.id = id;
 		this.quantityAvailable = quantityAvailable;
 		this.price = price;
 		this.name = name;
 		this.description = description;
-		this.imageThumb = imageThumb;
-		this.imageDetail = imageDetail;
-		this.imageBig = imageBig;
+		this.imageName = imageName;
 		this.commentsList = commentsList;
 		this.canCombat = canCombat;
 		this.canCook = canCook;
@@ -67,16 +63,8 @@ public class Droid
 		return description;
 	}
 
-	public String getImageThumb() {
-		return imageThumb;
-	}
-
-	public String getImageDetail() {
-		return imageDetail;
-	}
-
-	public String getImageBig() {
-		return imageBig;
+	public String getImageName() {
+		return imageName;
 	}
 
 	public ArrayList<Comment> getCommentsList() {
