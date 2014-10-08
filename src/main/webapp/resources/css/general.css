@@ -11,8 +11,9 @@
 	background-color: #E2E5D1;
 }
 
-#footer {
+.footer {
     margin-top: 25px;
+     background-color: #3D3234;
 }
 
 .twitter-typeahead .tt-query,

@@ -2,7 +2,7 @@
 <%@ page session="true" %>
 
 <!-- Footer -->
-<div id="footer">
+<div class="footer">
     <div class="container">
         <p class="text-muted">Tous droits réservés, eDroidz™.</p>
     </div>

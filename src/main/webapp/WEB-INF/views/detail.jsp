@@ -89,7 +89,7 @@
         <div class="row show-buying">
             <div class="container form-horizontal">
                 <h2>Achat</h2>
-                	<!-- <form action="/ticketz/panier/add" class="form-horizontal" role="form"> -->
+                	<form action="/eDroidz/panier/" class="form-horizontal" role="form">
 	                    <div class="form-group">
 	                        <label for="nbTickets" class="col-sm-4 control-label">Nombre d'androïde</label>
 	                        <div class="col-sm-6">
@@ -125,7 +125,7 @@
 	                    <div class="col-md-10 text-right">
 	                        <button type="submit" id='form_btn' class="btn btn-default">Ajouter au panier</button>                       
 	                    </div>
-                   <!-- </form> -->
+                   </form>
                 
             </div>
         </div>
