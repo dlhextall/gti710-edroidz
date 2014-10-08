@@ -22,55 +22,27 @@
               
             </ol>
             <div class="carousel-inner">
-              
-                <div class="item active">
-                    <img src="<c:url value="/resources/images/carousel/img2.jpg" />" alt="Osheaga">
-                    <div class="container">
-                        <div class="carousel-caption">
-                            <h1>Androïde DrZ60</h1>
-                            <div class="description">
-                                <p>Description DrZ60 blablabla testtt testtt testtt testtt testtt testtt testtt testtt testtt testtt testtt testtt testtt testtt testtt testtt testtt etc</p>
-                                <p class="indexPrice">20345$</p>
-                            </div>                           
-                        </div>
-                    </div>
-                </div>
-              
-                <div class="item">
-                    <img src="<c:url value="/resources/images/carousel/img1.jpg" />" alt="The Summer Slaughter Tour">
-                    <div class="container">
-                        <div class="carousel-caption">
-                            <h1>The Summer Slaughter Tour</h1>
-                            <div class="description">
-                                <p>Next level brutalness.</p>
-                            </div>                            
-                        </div>
-                    </div>
-                </div>
-
-                 <div class="item">
-                    <img src="<c:url value="/resources/images/carousel/img3.jpg" />" alt="The Summer Slaughter Tour">
-                    <div class="container">
-                        <div class="carousel-caption">
-                            <h1>Balix rulez</h1>
-                            <div class="description">
-                                <p>Next level brutalness.</p>
-                            </div>                            
-                        </div>
-                    </div>
-                </div>
-
-                 <div class="item">
-                    <img src="<c:url value="/resources/images/carousel/img4.jpg" />" alt="The Summer Slaughter Tour">
-                    <div class="container">
-                        <div class="carousel-caption">
-                            <h1>Alex suit de pres</h1>
-                            <div class="description">
-                                <p>Next level brutalness.</p>
-                            </div>                            
-                        </div>
-                    </div>
-                </div>
+            	
+            	<c:forEach items="${ promoList }" var="droid" varStatus="loop">
+					<c:choose>
+						<c:when test="${loop.index == 0}"><div class="item active"></c:when>
+						<c:otherwise><div class="item"></c:otherwise>
+					</c:choose>
+	                    <img src="<c:url value="/resources/images/carousel/${ droid.getPromoImgName() }.jpg" />" alt="${ droid.getName() }">
+	                    <div class="container">
+	                        <div class="carousel-caption">
+	                            <h1>${ droid.getName() }</h1>
+	                            <div class="description">
+	                                <p>${ droid.getDescription() }</p>
+	                                <p class="indexPrice">${ droid.getPrice() }$</p>
+	                            </div>   
+	                            <div class="detailLink">
+	                                <p class="text-right"><a href="/edroidz/detail?id=${ droid.getId() }" class="btn btn-default show-id">Détails</a></p>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+                </c:forEach>
               
             </div>
             <a class="left carousel-control" href="#featuredShows" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
@@ -81,16 +53,13 @@
         <div id="featuredInfo" class="container">
             <div class="row">
                 <div class="col-md-8">
-                    <h1></h1>
+                <h1> </h1>
                 </div>
                 <div class="col-md-4">
-                    <!--<h3 class="text-right">
-                        <small>Du <strong id="date-start"> 24 Avril</strong> au <strong id="date-end">24 Juin</strong></small>
-                    </h3>-->
                 </div>
             </div>
             <div class="description"></div>
-            <p class="text-right"><a href="/edroidz/detail" class="btn btn-default show-id">Détails</a></p>
+            <div class="detailLink"></div>
         </div>
 
         <!-- Footer -->

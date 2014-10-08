@@ -14,5 +14,6 @@ $(function() {
         //$("#featuredInfo .show-id").attr("href", "detail/" + $("#featuredShows .carousel-inner .active .show-id").html());
         $("#featuredInfo #date-start").html($("#featuredShows .carousel-inner .active .dates .start").html());
         $("#featuredInfo #date-end").html($("#featuredShows .carousel-inner .active .dates .end").html());
+        $("#featuredInfo .detailLink").html($("#featuredShows .carousel-inner .active div.detailLink").html());
     }
 });

@@ -18,158 +18,24 @@
 			<div class="main">								
 				<div class="gamma-container gamma-loading" id="gamma-container">
 					<ul class="gamma-gallery">
-
-						<li>
-                            <div data-alt="1" data-description="<h3>Sky high</h3>" data-max-width="1800" data-max-height="1350">
-                                <div data-src="<c:url value="/resources/images/details-big/49.jpg" />" data-min-width="1300"></div>
-                                <div data-src="<c:url value="/resources/images/details-big/49.jpg" />" data-min-width="1000"></div>
-                                <div data-src="<c:url value="/resources/images/details-big/49.jpg" />" data-min-width="700"></div>
-                                <div data-src="<c:url value="/resources/images/details-big/49.jpg" />" data-min-width="300"></div>
-                                <div data-src="<c:url value="/resources/images/details-big/49.jpg" />" data-min-width="200"></div>
-                                <div data-src="<c:url value="/resources/images/details-big/49.jpg" />" data-min-width="140"></div>
-                                <div data-src="<c:url value="/resources/images/details-big/49.jpg" />"></div>
-                                <noscript>
-                                    <img src="<c:url value="/resources/images/details-big/49.jpg" />" alt="img03"/>
-                                </noscript>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div data-alt="2" data-description="<h3>Sky high</h3>" data-max-width="1800" data-max-height="1350">
-                                <div data-src="<c:url value="/resources/images/details-big/48.jpg" />" data-min-width="1300"></div>
-                                <div data-src="<c:url value="/resources/images/details-big/48.jpg" />" data-min-width="1000"></div>
-                                <div data-src="<c:url value="/resources/images/details-big/48.jpg" />" data-min-width="700"></div>
-                                <div data-src="<c:url value="/resources/images/details-big/48.jpg" />" data-min-width="300"></div>
-                                <div data-src="<c:url value="/resources/images/details-big/48.jpg" />" data-min-width="200"></div>
-                                <div data-src="<c:url value="/resources/images/details-big/48.jpg" />" data-min-width="140"></div>
-                                <div data-src="<c:url value="/resources/images/details-big/48.jpg" />"></div>
-                                <noscript>
-                                    <img src="<c:url value="/resources/images/details-big/48.jpg" />" alt="3"/>
-                                </noscript>
-                            </div>
-                        </li>
-
-
-                        <li>
-                            <div data-alt="img03" data-description="<h3>Sky high</h3>" data-max-width="1800" data-max-height="1350">
-                                <div data-src="<c:url value="/resources/images/details-big/49.jpg" />" data-min-width="1300"></div>
-                                <div data-src="<c:url value="/resources/images/details-big/49.jpg" />" data-min-width="1000"></div>
-                                <div data-src="<c:url value="/resources/images/details-big/49.jpg" />" data-min-width="700"></div>
-                                <div data-src="<c:url value="/resources/images/details-big/49.jpg" />" data-min-width="300"></div>
-                                <div data-src="<c:url value="/resources/images/details-big/49.jpg" />" data-min-width="200"></div>
-                                <div data-src="<c:url value="/resources/images/details-big/49.jpg" />" data-min-width="140"></div>
-                                <div data-src="<c:url value="/resources/images/details-big/49.jpg" />"></div>
-                                <noscript>
-                                    <img src="<c:url value="/resources/images/details-big/49.jpg" />" alt="img03"/>
-                                </noscript>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div data-alt="img03" data-description="<h3>Sky high</h3>" data-max-width="1800" data-max-height="1350">
-                                <div data-src="<c:url value="/resources/images/details-big/51.jpg" />" data-min-width="1300"></div>
-                                <div data-src="<c:url value="/resources/images/details-big/51.jpg" />" data-min-width="1000"></div>
-                                <div data-src="<c:url value="/resources/images/details-big/51.jpg" />" data-min-width="700"></div>
-                                <div data-src="<c:url value="/resources/images/details-big/51.jpg" />" data-min-width="300"></div>
-                                <div data-src="<c:url value="/resources/images/details-big/51.jpg" />" data-min-width="200"></div>
-                                <div data-src="<c:url value="/resources/images/details-big/51.jpg" />" data-min-width="140"></div>
-                                <div data-src="<c:url value="/resources/images/details-big/51.jpg" />"></div>
-                                <noscript>
-                                    <img src="<c:url value="/resources/images/details-big/51.jpg" />" alt="img03"/>
-                                </noscript>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div data-alt="img03" data-description="<h3>Sky high</h3>" data-max-width="1800" data-max-height="1350">
-                                <div data-src="<c:url value="/resources/images/details-big/23.jpg" />" data-min-width="1300"></div>
-                                <div data-src="<c:url value="/resources/images/details-big/23.jpg" />" data-min-width="1000"></div>
-                                <div data-src="<c:url value="/resources/images/details-big/23.jpg" />" data-min-width="700"></div>
-                                <div data-src="<c:url value="/resources/images/details-big/23.jpg" />" data-min-width="300"></div>
-                                <div data-src="<c:url value="/resources/images/details-big/23.jpg" />" data-min-width="200"></div>
-                                <div data-src="<c:url value="/resources/images/details-big/23.jpg" />" data-min-width="140"></div>
-                                <div data-src="<c:url value="/resources/images/details-big/23.jpg" />"></div>
-                                <noscript>
-                                    <img src="images/details-big/23.jpg" />" alt="img03"/>
-                                </noscript>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div data-alt="img03" data-description="<h3>Sky high</h3>" data-max-width="1800" data-max-height="1350">
-                                <div data-src="<c:url value="/resources/images/details-big/12.jpg" />" data-min-width="1300"></div>
-                                <div data-src="<c:url value="/resources/images/details-big/12.jpg" />" data-min-width="1000"></div>
-                                <div data-src="<c:url value="/resources/images/details-big/12.jpg" />" data-min-width="700"></div>
-                                <div data-src="<c:url value="/resources/images/details-big/12.jpg" />" data-min-width="300"></div>
-                                <div data-src="<c:url value="/resources/images/details-big/12.jpg" />" data-min-width="200"></div>
-                                <div data-src="<c:url value="/resources/images/details-big/12.jpg" />" data-min-width="140"></div>
-                                <div data-src="<c:url value="/resources/images/details-big/12.jpg" />"></div>
-                                <noscript>
-                                    <img src="<c:url value="/resources/images/details-big/12.jpg" />" alt="img03"/>
-                                </noscript>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div data-alt="img03" data-description="<h3>Sky high</h3>" data-max-width="1800" data-max-height="1350">
-                                <div data-src="<c:url value="/resources/images/details/8.jpg" />" data-min-width="1300"></div>
-                                <div data-src="<c:url value="/resources/images/details/8.jpg" />" data-min-width="1000"></div>
-                                <div data-src="<c:url value="/resources/images/details/8.jpg" />" data-min-width="700"></div>
-                                <div data-src="<c:url value="/resources/images/details/8.jpg" />" data-min-width="300"></div>
-                                <div data-src="<c:url value="/resources/images/details/8.jpg" />" data-min-width="200"></div>
-                                <div data-src="<c:url value="/resources/images/details/8.jpg" />" data-min-width="140"></div>
-                                <div data-src="<c:url value="/resources/images/details/8.jpg" />"></div>
-                                <noscript>
-                                    <img src="<c:url value="/resources/images/details/8.jpg" />" alt="img03"/>
-                                </noscript>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div data-alt="img03" data-description="<h3>Sky high</h3>" data-max-width="1800" data-max-height="1350">
-                                <div data-src="<c:url value="/resources/images/details-big/53.jpg" />" data-min-width="1300"></div>
-                                <div data-src="<c:url value="/resources/images/details-big/53.jpg" />" data-min-width="1000"></div>
-                                <div data-src="<c:url value="/resources/images/details-big/53.jpg" />" data-min-width="700"></div>
-                                <div data-src="<c:url value="/resources/images/details-big/53.jpg" />" data-min-width="300"></div>
-                                <div data-src="<c:url value="/resources/images/details-big/53.jpg" />" data-min-width="200"></div>
-                                <div data-src="<c:url value="/resources/images/details-big/53.jpg" />" data-min-width="140"></div>
-                                <div data-src="<c:url value="/resources/images/details-big/53.jpg" />"></div>
-                                <noscript>
-                                    <img src="images/details-big/53.jpg" />" alt="img03"/>
-                                </noscript>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div data-alt="img03" data-description="<h3>Sky high</h3>" data-max-width="1800" data-max-height="1350">
-                                <div data-src="<c:url value="/resources/images/details-big/55.jpg" />" data-min-width="1300"></div>
-                                <div data-src="<c:url value="/resources/images/details-big/55.jpg" />" data-min-width="1000"></div>
-                                <div data-src="<c:url value="/resources/images/details-big/55.jpg" />" data-min-width="700"></div>
-                                <div data-src="<c:url value="/resources/images/details-big/55.jpg" />" data-min-width="300"></div>
-                                <div data-src="<c:url value="/resources/images/details-big/55.jpg" />" data-min-width="200"></div>
-                                <div data-src="<c:url value="/resources/images/details-big/55.jpg" />" data-min-width="140"></div>
-                                <div data-src="<c:url value="/resources/images/details-big/55.jpg" />"></div>
-                                <noscript>
-                                    <img src="<c:url value="/resources/images/details-big/55.jpg" />" alt="img03"/>
-                                </noscript>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div data-alt="img03" data-description="<h3>Sky high</h3>" data-max-width="1800" data-max-height="1350">
-                                <div data-src="<c:url value="/resources/images/details-big/15.jpg" />" data-min-width="1300"></div>
-                                <div data-src="<c:url value="/resources/images/details-big/15.jpg" />" data-min-width="1000"></div>
-                                <div data-src="<c:url value="/resources/images/details-big/15.jpg" />" data-min-width="700"></div>
-                                <div data-src="<c:url value="/resources/images/details-big/15.jpg" />" data-min-width="300"></div>
-                                <div data-src="<c:url value="/resources/images/details-big/15.jpg" />" data-min-width="200"></div>
-                                <div data-src="<c:url value="/resources/images/details-big/15.jpg" />" data-min-width="140"></div>
-                                <div data-src="<c:url value="/resources/images/details-big/15.jpg" />"></div>
-                                <noscript>
-                                    <img src="<c:url value="/resources/images/details-big/15.jpg" />" alt="img03"/>
-                                </noscript>
-                            </div>
-                        </li>
-
+						
+						<c:forEach items="${ droidList }" var="droid" varStatus="loop">
+							<li>
+	                            <div data-alt="${ droid.getId() }" data-description="<h3>${ droid.getName() }</h3>" data-max-width="1800" data-max-height="1350">
+	                                <div data-src="<c:url value="/resources/images/details-big/${ droid.getImageName() }.jpg" />" data-min-width="1300"></div>
+	                                <div data-src="<c:url value="/resources/images/details-big/${ droid.getImageName() }.jpg" />" data-min-width="1000"></div>
+	                                <div data-src="<c:url value="/resources/images/details-big/${ droid.getImageName() }.jpg" />" data-min-width="700"></div>
+	                                <div data-src="<c:url value="/resources/images/details-big/${ droid.getImageName() }.jpg" />" data-min-width="300"></div>
+	                                <div data-src="<c:url value="/resources/images/details-big/${ droid.getImageName() }.jpg" />" data-min-width="200"></div>
+	                                <div data-src="<c:url value="/resources/images/details-big/${ droid.getImageName() }.jpg" />" data-min-width="140"></div>
+	                                <div data-src="<c:url value="/resources/images/details-big/${ droid.getImageName() }.jpg" />"></div>
+	                                <noscript>
+	                                    <img src="<c:url value="/resources/images/details-big/${ droid.getImageName() }.jpg" />" alt="${ droid.getName() }"/>
+	                                </noscript>
+	                            </div>
+                        	</li>
+						</c:forEach>
+						
 					</ul>
 				</div>
 			</div><!--/main-->

@@ -731,12 +731,10 @@ var Gamma = (function() {
 		},
 		// triggered when one grid image is clicked
 		_singleview = function() {
-
-			//var id = $( this ).index();
-			//_saveState( id );
-			alert($(this).find('img').attr('alt'));
 			
-			window.location.href='detail.html';
+			//Click sur une image de catalogue
+			var id = $(this).find('img').attr('alt');			
+			window.location.href='/edroidz/detail?id=' + id;
 
 		},
 		// shows the item

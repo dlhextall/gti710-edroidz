@@ -17,49 +17,67 @@
         <div class="row show-preview">
             <div class="container">
                 <div class="col-md-6">
-                    <h2>Modèle Chix-101</h2>
+                    <h2>${ droid.getName() }</h2>
                     <h4>Compétences</h4>
                     <div class="skills">
                     	<div class="skill">
                             <img src="<c:url value="/resources/images/skills/combatOn.png" />" width="40px" height="40px">
-                            <div class="skillOn">
+                            <c:choose>
+								<c:when test="${droid.isCanCombat() }"><div class="skillOn"></c:when>
+								<c:otherwise><div class="skillOff"></c:otherwise>
+							</c:choose>
                             	<p>Combat</p>
                             </div>
                        	</div>
                         <div class="skill">
                             <img src="<c:url value="/resources/images/skills/cookOn.png" />" width="40px" height="40px">
-                            <div class="skillOn">
+                            <c:choose>
+								<c:when test="${droid.isCanCook() }"><div class="skillOn"></c:when>
+								<c:otherwise><div class="skillOff"></c:otherwise>
+							</c:choose>
                             	<p>Cuisine</p>
                             </div>
                       	</div>
                         <div class="skill">
                             <img src="<c:url value="/resources/images/skills/gardenOn.png" />" width="40px" height="40px">
-                            <div class="skillOn">
+                            <c:choose>
+								<c:when test="${droid.isCanGarden() }"><div class="skillOn"></c:when>
+								<c:otherwise><div class="skillOff"></c:otherwise>
+							</c:choose>
                             	<p>Jardinage</p>
                             </div>
                       	</div>
                         <div class="skill">
                             <img src="<c:url value="/resources/images/skills/laundryOn.png" />" width="40px" height="40px">
-                            <div class="skillOn">
+                            <c:choose>
+								<c:when test="${droid.isCanLaundry() }"><div class="skillOn"></c:when>
+								<c:otherwise><div class="skillOff"></c:otherwise>
+							</c:choose>
                             	<p>Lessive</p>
                             </div>
                       	</div>
                         <div class="skill">
                             <img src="<c:url value="/resources/images/skills/cleaningOn.png" />" width="40px" height="40px">
-                            <div class="skillOn">
+                            <c:choose>
+								<c:when test="${droid.isCanClean() }"><div class="skillOn"></c:when>
+								<c:otherwise><div class="skillOff"></c:otherwise>
+							</c:choose>
                             	<p>Ménage</p>
                             </div>
                       	</div>
                         <div class="skill">
                             <img src="<c:url value="/resources/images/skills/washdishesOff.png" />" width="40px" height="40px">
-                            <div class="skillOff">
+                            <c:choose>
+								<c:when test="${droid.isCanWasDishes() }"><div class="skillOn"></c:when>
+								<c:otherwise><div class="skillOff"></c:otherwise>
+							</c:choose>
                             	<p>Vaisselle</p>
                             </div>
                       	</div>
                    	</div>
                 </div>
                 <div class="col-md-6 decalage">
-                    <img src="<c:url value="/resources/images/details/52.jpg" />" width="310px" height="367px">
+                    <img src="<c:url value="/resources/images/details/${droid.getImageName() }.jpg" />" width="310px" height="367px">
                 </div>
             </div>
         </div>
@@ -77,7 +95,7 @@
                     <div class="list-group list-group-item">
                     	
                     	<!--<a href="#" class="list-group-item">-->
-                    		<p class="list-group-item-text">Un Viking est un explorateur, commerçant, pillard mais aussi pirate scandinave au cours d’une période s’étendant du viiie au xie siècle3. Par extension et par abus de langage, on emploie le terme en français pour désigner la civilisation scandinave de l'âge du fer tardif c'est-à-dire à partir de la fin du iie siècle à l'âge du fer romain. Ils sont souvent appelés Normands dans la bibliographie ancienne, c'est-à-dire les « hommes du Nord ».</p>
+                    		<p class="list-group-item-text">${droid.getDescription() }</p>
                     	<!--</a>-->
                         
                     </div>
@@ -100,25 +118,15 @@
 	                                <option value="4">4</option>
 	                            </select>
 	                        </div>
-	                    </div>
-	                    <!-- <div class="form-group">
-	                        <label for="showDate" class="col-sm-4 control-label">Date du spectacle</label>
-	                        <div class="col-sm-6">
-	                            <select name="showDate" id="showDate" class="form-control">
-	                                <option value="1">January 1st</option>
-	                                <option value="2">January 2nd</option>
-	                            </select>
-	                        </div>
-	                    </div> -->
-	                   
+	                    </div>	                   
 	                    <div class="form-group">
 	                        <label for="totalPrice" class="col-sm-4 control-label">Total</label>
 	                        <div class="col-sm-6">
 	                            <input name="totalPrice" id='totalPrice' type="text" class="form-control" value="8199,99" readonly>
-	                            <input type="hidden" id='idSpectacle' name="idSpectacle" value="1">
-	                            <input type="hidden" id='unityPrice' name="unityPrice" value="199.99">
-	                            <input type="hidden" id='nomSpectacle' name="nomSpectacle" value="Osheaga">
-	                            <input type="hidden" id='nomBilletPanier' name="nomBilletPanier" value="">
+	                            <input type="hidden" id='idDroid' name="idDroid" value="${droid.getId()">
+	                            <input type="hidden" id='unityPrice' name="unityPrice" value="${droid.getPrice()">
+	                            <input type="hidden" id='nomDroid' name="nomDroid" value="${droid.getName()">
+	                            <!-- <input type="hidden" id='nomBilletPanier' name="nomBilletPanier" value="">  -->
 	                        </div>
 	                    </div>
 	                    <div class="clearfix"></div>
