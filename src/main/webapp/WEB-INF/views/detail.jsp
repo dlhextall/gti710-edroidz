@@ -6,7 +6,7 @@
 <html lang="en">
     <head>
         <%@ include file="templates/baseHeaderComponents.jsp" %>
-        <title>Catalogue</title>
+        <title>Détails</title>
         <!-- Script -->
 		<script src="<c:url value="/resources/js/modernizr.custom.70736.js" />"></script>
     </head>    
@@ -89,7 +89,7 @@
         <div class="row show-buying">
             <div class="container form-horizontal">
                 <h2>Achat</h2>
-                	<form action="/eDroidz/panier/" class="form-horizontal" role="form">
+                	<form action="/edroidz/panier/" class="form-horizontal" role="form">
 	                    <div class="form-group">
 	                        <label for="nbTickets" class="col-sm-4 control-label">Nombre d'androïde</label>
 	                        <div class="col-sm-6">
