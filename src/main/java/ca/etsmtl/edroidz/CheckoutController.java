@@ -47,7 +47,7 @@ public class CheckoutController {
 	 */
 	@RequestMapping(value = "/checkout", method = RequestMethod.GET)
 	public String checkout(Locale locale, Model model) {			
-		return "Checkout";
+		return "checkout";
 	}
 
 	

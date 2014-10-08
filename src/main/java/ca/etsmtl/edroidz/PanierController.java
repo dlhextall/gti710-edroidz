@@ -26,6 +26,6 @@ public class PanierController {
 	@RequestMapping(value = "/panier", method = RequestMethod.GET)
 	public String panier(Locale locale, Model model) {		
 				
-		return "Panier";
+		return "panier";
 	}
 }

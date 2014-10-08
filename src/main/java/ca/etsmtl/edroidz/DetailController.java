@@ -26,6 +26,6 @@ public class DetailController {
 	@RequestMapping(value = "/detail", method = RequestMethod.GET)
 	public String detail(Locale locale, Model model) {		
 				
-		return "Detail";
+		return "detail";
 	}
 }
