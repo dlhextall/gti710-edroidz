@@ -16,7 +16,7 @@ public class DetailController {
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
-	@RequestMapping(value = "/detail?id={id}", method = RequestMethod.GET)
+	@RequestMapping(value = "/detail/{id}", method = RequestMethod.GET)
 	public String detail(@PathVariable("id") int _droidId, Locale locale, Model model) {		
 		
 		Droid droid = DroidzManager.getInstance().getDroid(_droidId);
@@ -24,7 +24,7 @@ public class DetailController {
 		if (droid == null)
 			System.out.println("Le droid est introuvable.");
 		
-		model.addAttribute("promoList", droid );
+		model.addAttribute("droid", droid );
 				
 		return "detail";
 	}

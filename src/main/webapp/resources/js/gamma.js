@@ -734,7 +734,7 @@ var Gamma = (function() {
 			
 			//Click sur une image de catalogue
 			var id = $(this).find('img').attr('alt');			
-			window.location.href='/edroidz/detail?id=' + id;
+			window.location.href='/edroidz/detail/' + id;
 
 		},
 		// shows the item

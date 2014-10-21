@@ -23,7 +23,7 @@
                     	<div class="skill">
                             <img src="<c:url value="/resources/images/skills/combatOn.png" />" width="40px" height="40px">
                             <c:choose>
-								<c:when test="${droid.isCanCombat() }"><div class="skillOn"></c:when>
+								<c:when test="${ droid.isCanCombat() }"><div class="skillOn"></c:when>
 								<c:otherwise><div class="skillOff"></c:otherwise>
 							</c:choose>
                             	<p>Combat</p>
@@ -32,7 +32,7 @@
                         <div class="skill">
                             <img src="<c:url value="/resources/images/skills/cookOn.png" />" width="40px" height="40px">
                             <c:choose>
-								<c:when test="${droid.isCanCook() }"><div class="skillOn"></c:when>
+								<c:when test="${ droid.isCanCook() }"><div class="skillOn"></c:when>
 								<c:otherwise><div class="skillOff"></c:otherwise>
 							</c:choose>
                             	<p>Cuisine</p>
@@ -41,7 +41,7 @@
                         <div class="skill">
                             <img src="<c:url value="/resources/images/skills/gardenOn.png" />" width="40px" height="40px">
                             <c:choose>
-								<c:when test="${droid.isCanGarden() }"><div class="skillOn"></c:when>
+								<c:when test="${ droid.isCanGarden() }"><div class="skillOn"></c:when>
 								<c:otherwise><div class="skillOff"></c:otherwise>
 							</c:choose>
                             	<p>Jardinage</p>
@@ -50,7 +50,7 @@
                         <div class="skill">
                             <img src="<c:url value="/resources/images/skills/laundryOn.png" />" width="40px" height="40px">
                             <c:choose>
-								<c:when test="${droid.isCanLaundry() }"><div class="skillOn"></c:when>
+								<c:when test="${ droid.isCanLaundry() }"><div class="skillOn"></c:when>
 								<c:otherwise><div class="skillOff"></c:otherwise>
 							</c:choose>
                             	<p>Lessive</p>
@@ -59,7 +59,7 @@
                         <div class="skill">
                             <img src="<c:url value="/resources/images/skills/cleaningOn.png" />" width="40px" height="40px">
                             <c:choose>
-								<c:when test="${droid.isCanClean() }"><div class="skillOn"></c:when>
+								<c:when test="${ droid.isCanClean() }"><div class="skillOn"></c:when>
 								<c:otherwise><div class="skillOff"></c:otherwise>
 							</c:choose>
                             	<p>Ménage</p>
@@ -68,7 +68,7 @@
                         <div class="skill">
                             <img src="<c:url value="/resources/images/skills/washdishesOff.png" />" width="40px" height="40px">
                             <c:choose>
-								<c:when test="${droid.isCanWasDishes() }"><div class="skillOn"></c:when>
+								<c:when test="${ droid.isCanWashDishes() }"><div class="skillOn"></c:when>
 								<c:otherwise><div class="skillOff"></c:otherwise>
 							</c:choose>
                             	<p>Vaisselle</p>
@@ -77,7 +77,7 @@
                    	</div>
                 </div>
                 <div class="col-md-6 decalage">
-                    <img src="<c:url value="/resources/images/details/${droid.getImageName() }.jpg" />" width="310px" height="367px">
+                    <img src="<c:url value="/resources/images/details/${ droid.getImageName() }.jpg" />" width="310px" height="367px">
                 </div>
             </div>
         </div>
@@ -95,7 +95,7 @@
                     <div class="list-group list-group-item">
                     	
                     	<!--<a href="#" class="list-group-item">-->
-                    		<p class="list-group-item-text">${droid.getDescription() }</p>
+                    		<p class="list-group-item-text">${ droid.getDescription() }</p>
                     	<!--</a>-->
                         
                     </div>
@@ -123,9 +123,9 @@
 	                        <label for="totalPrice" class="col-sm-4 control-label">Total</label>
 	                        <div class="col-sm-6">
 	                            <input name="totalPrice" id='totalPrice' type="text" class="form-control" value="8199,99" readonly>
-	                            <input type="hidden" id='idDroid' name="idDroid" value="${droid.getId()">
-	                            <input type="hidden" id='unityPrice' name="unityPrice" value="${droid.getPrice()">
-	                            <input type="hidden" id='nomDroid' name="nomDroid" value="${droid.getName()">
+	                            <input type="hidden" id='idDroid' name="idDroid" value="${ droid.getId() }">
+	                            <input type="hidden" id='unityPrice' name="unityPrice" value="${ droid.getPrice() }">
+	                            <input type="hidden" id='nomDroid' name="nomDroid" value="${ droid.getName() }">
 	                            <!-- <input type="hidden" id='nomBilletPanier' name="nomBilletPanier" value="">  -->
 	                        </div>
 	                    </div>
