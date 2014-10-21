@@ -9,6 +9,10 @@
         <title>Détails</title>
         <!-- Script -->
 		<script src="<c:url value="/resources/js/modernizr.custom.70736.js" />"></script>
+		
+		<style type="text/css">
+			@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css')
+		</style>
     </head>    
     <body>
     	<!-- Header -->
@@ -17,59 +21,90 @@
         <div class="row show-preview">
             <div class="container">
                 <div class="col-md-6">
-                    <h2>${ droid.getName() }</h2>
+                    <h2>${ droid.name }</h2>
                     <h4>Compétences</h4>
                     <div class="skills">
                     	<div class="skill">
-                            <img src="<c:url value="/resources/images/skills/combatOn.png" />" width="40px" height="40px">
+                            
                             <c:choose>
-								<c:when test="${ droid.isCanCombat() }"><div class="skillOn"></c:when>
-								<c:otherwise><div class="skillOff"></c:otherwise>
+								<c:when test="${ droid.canCombat }">
+									<img src="<c:url value="/resources/images/skills/combatOn.png" />" width="40px" height="40px">
+									<div class="skillOn">
+								</c:when>
+								<c:otherwise>
+									<img src="<c:url value="/resources/images/skills/combatOff.png" />" width="40px" height="40px">
+									<div class="skillOff">
+								</c:otherwise>
 							</c:choose>
                             	<p>Combat</p>
                             </div>
                        	</div>
                         <div class="skill">
-                            <img src="<c:url value="/resources/images/skills/cookOn.png" />" width="40px" height="40px">
                             <c:choose>
-								<c:when test="${ droid.isCanCook() }"><div class="skillOn"></c:when>
-								<c:otherwise><div class="skillOff"></c:otherwise>
+								<c:when test="${ droid.canCook }">
+									<img src="<c:url value="/resources/images/skills/cookOn.png" />" width="40px" height="40px">
+									<div class="skillOn">
+								</c:when>
+								<c:otherwise>
+									<img src="<c:url value="/resources/images/skills/cookOff.png" />" width="40px" height="40px">
+									<div class="skillOff">
+								</c:otherwise>
 							</c:choose>
                             	<p>Cuisine</p>
                             </div>
                       	</div>
                         <div class="skill">
-                            <img src="<c:url value="/resources/images/skills/gardenOn.png" />" width="40px" height="40px">
                             <c:choose>
-								<c:when test="${ droid.isCanGarden() }"><div class="skillOn"></c:when>
-								<c:otherwise><div class="skillOff"></c:otherwise>
+								<c:when test="${ droid.canGarden }">
+									<img src="<c:url value="/resources/images/skills/gardenOn.png" />" width="40px" height="40px">
+									<div class="skillOn">
+								</c:when>
+								<c:otherwise>
+									<img src="<c:url value="/resources/images/skills/gardenOff.png" />" width="40px" height="40px">
+									<div class="skillOff">
+								</c:otherwise>
 							</c:choose>
                             	<p>Jardinage</p>
                             </div>
                       	</div>
                         <div class="skill">
-                            <img src="<c:url value="/resources/images/skills/laundryOn.png" />" width="40px" height="40px">
                             <c:choose>
-								<c:when test="${ droid.isCanLaundry() }"><div class="skillOn"></c:when>
-								<c:otherwise><div class="skillOff"></c:otherwise>
+								<c:when test="${ droid.canLaundry }">
+									<img src="<c:url value="/resources/images/skills/laundryOn.png" />" width="40px" height="40px">
+									<div class="skillOn">
+								</c:when>
+								<c:otherwise>
+									<img src="<c:url value="/resources/images/skills/laundryOff.png" />" width="40px" height="40px">
+									<div class="skillOff">
+								</c:otherwise>
 							</c:choose>
                             	<p>Lessive</p>
                             </div>
                       	</div>
                         <div class="skill">
-                            <img src="<c:url value="/resources/images/skills/cleaningOn.png" />" width="40px" height="40px">
                             <c:choose>
-								<c:when test="${ droid.isCanClean() }"><div class="skillOn"></c:when>
-								<c:otherwise><div class="skillOff"></c:otherwise>
+								<c:when test="${ droid.canClean }">
+									<img src="<c:url value="/resources/images/skills/cleaningOn.png" />" width="40px" height="40px">
+									<div class="skillOn">
+								</c:when>
+								<c:otherwise>
+									<img src="<c:url value="/resources/images/skills/cleaningOff.png" />" width="40px" height="40px">
+									<div class="skillOff">
+								</c:otherwise>
 							</c:choose>
                             	<p>Ménage</p>
                             </div>
                       	</div>
                         <div class="skill">
-                            <img src="<c:url value="/resources/images/skills/washdishesOff.png" />" width="40px" height="40px">
                             <c:choose>
-								<c:when test="${ droid.isCanWashDishes() }"><div class="skillOn"></c:when>
-								<c:otherwise><div class="skillOff"></c:otherwise>
+								<c:when test="${ droid.canWashDishes }">
+									<img src="<c:url value="/resources/images/skills/washdishesOn.png" />" width="40px" height="40px">
+									<div class="skillOn">
+								</c:when>
+								<c:otherwise>
+									<img src="<c:url value="/resources/images/skills/washdishesOff.png" />" width="40px" height="40px">
+									<div class="skillOff">
+								</c:otherwise>
 							</c:choose>
                             	<p>Vaisselle</p>
                             </div>
@@ -77,7 +112,7 @@
                    	</div>
                 </div>
                 <div class="col-md-6 decalage">
-                    <img src="<c:url value="/resources/images/details/${ droid.getImageName() }.jpg" />" width="310px" height="367px">
+                    <img src="<c:url value="/resources/images/details/${ droid.imageName }.jpg" />" width="310px" height="367px">
                 </div>
             </div>
         </div>
@@ -95,7 +130,7 @@
                     <div class="list-group list-group-item">
                     	
                     	<!--<a href="#" class="list-group-item">-->
-                    		<p class="list-group-item-text">${ droid.getDescription() }</p>
+                    		<p class="list-group-item-text">${ droid.description }</p>
                     	<!--</a>-->
                         
                     </div>
@@ -123,9 +158,9 @@
 	                        <label for="totalPrice" class="col-sm-4 control-label">Total</label>
 	                        <div class="col-sm-6">
 	                            <input name="totalPrice" id='totalPrice' type="text" class="form-control" value="8199,99" readonly>
-	                            <input type="hidden" id='idDroid' name="idDroid" value="${ droid.getId() }">
-	                            <input type="hidden" id='unityPrice' name="unityPrice" value="${ droid.getPrice() }">
-	                            <input type="hidden" id='nomDroid' name="nomDroid" value="${ droid.getName() }">
+	                            <input type="hidden" id='idDroid' name="idDroid" value="${ droid.id }">
+	                            <input type="hidden" id='unityPrice' name="unityPrice" value="${ droid.price }">
+	                            <input type="hidden" id='nomDroid' name="nomDroid" value="${ droid.name }">
 	                            <!-- <input type="hidden" id='nomBilletPanier' name="nomBilletPanier" value="">  -->
 	                        </div>
 	                    </div>
@@ -144,7 +179,8 @@
                 <p>productssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss</p>
             </div>
         </div>
-
+		
+		<!--
 		<div class="comment">
             <div class="container">
                 <h2>Votre appréciation du produit</h2>
@@ -162,9 +198,23 @@
 	            	<button type="submit" id='form_btn' class="btn btn-default">Envoyer</button>                       
 	            </div>
             </div>
+        </div>-->
+        
+        <div class="comment">
+            <div class="container">
+                <h2>Votre appréciation du produit</h2>
+                <textarea id="userComment" name="userComment" placeholder="Votre commentaire" required type="text"  maxlength="250" cols="1" rows="1"></textarea>   
+                <div id="stars-existing" class="starrr" data-rating='4'></div>         
+                <div class="col-md-10 text-right">
+	            	<button type="submit" id='form_btn' class="btn btn-default">Envoyer</button>                       
+	            </div>
+            </div>
         </div>
         
         
+        
+        
+        <!--
         <div class="container">
             <div class="oldCommentContainer">
                 <textarea class="oldComment" name="userComment" required type="text"  maxlength="250" cols="1" rows="1" enabled="false">Bla blbablablaB lablbablablaBl ablbabla blaBlablbablablaBlablbablabl aBlablbabla blaB lablbablablaBlablbablablaBlabl bablablaBl</textarea>
@@ -177,35 +227,7 @@
 					<input type="radio" name="rating" value="5" disabled="disabled"/><span></span>
               	</div> 
             </div>
-        </div>
-        
-        <div class="container">
-            <div class="oldCommentContainer">
-                <textarea class="oldComment" name="userComment" required type="text"  maxlength="250" cols="1" rows="1" enabled="false">Bla blbablablaB lablbablablaBl ablbabla blaBlablbablablaBlablbablabl aBlablbabla blaB lablbablablaBlablbablablaBlabl bablablaBl</textarea>
-                <div class="rating2">
-                    <input type="radio" name="rating" value="0" disabled="disabled"/><span id="hideStars"></span>
-                    <input type="radio" name="rating" value="1" disabled="disabled"/><span></span>
-                    <input type="radio" name="rating" value="2" disabled="disabled"/><span></span>
-                    <input type="radio" name="rating" value="3" disabled="disabled" checked /><span></span>
-                    <input type="radio" name="rating" value="4" disabled="disabled"/><span></span>
-					<input type="radio" name="rating" value="5" disabled="disabled"/><span></span>
-              	</div> 
-            </div>
-        </div>
-        
-        <div class="container">
-            <div class="oldCommentContainer">
-                <textarea class="oldComment" name="userComment" required type="text"  maxlength="250" cols="1" rows="1" enabled="false">Bla</textarea>
-                <div class="rating2">
-                    <input type="radio" name="rating" value="0" enabled="false"/><span id="hideStars"></span>
-                    <input type="radio" name="rating" value="1" enabled="false"/><span></span>
-                    <input type="radio" name="rating" value="2" enabled="false"/><span></span>
-                    <input type="radio" name="rating" value="3" enabled="false" checked /><span></span>
-                    <input type="radio" name="rating" value="4" enabled="false"/><span></span>
-					<input type="radio" name="rating" value="5" enabled="false"/><span></span>
-              	</div> 
-            </div>
-        </div>
+        </div>-->
 
         <!-- Footer -->
         <%@ include file="templates/footer.jsp" %>
@@ -215,6 +237,7 @@
 
         <!-- Custom javascript -->
         
+        <script src="<c:url value="/resources/js/stars.js" />"></script>
         
 	</body>
 </html>

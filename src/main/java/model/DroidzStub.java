@@ -443,7 +443,7 @@ public class DroidzStub
 				+ "électriques à courant alternatif de type « sans-balais ». "
 				+ "Chacun des axes est équipé d’un codeur absolu sur un tour permettant de repérer sa position angulaire "
 				+ "par rapport à la configuration d’origine.";
-		droid = new Droid(11, 76, 2999.99, "Modèle 101", description, "11", commentList, null,
+		droid = new Droid(11, 76, 2999.99, "Michelle-101", description, "11", commentList, null,
 				//combat, cook, garden, laundry, clean , dishes
 				false, false, true, true, false, false);
 		droidList.add(droid);

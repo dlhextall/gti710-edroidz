@@ -21,16 +21,16 @@
 						
 						<c:forEach items="${ droidList }" var="droid" varStatus="loop">
 							<li>
-	                            <div data-alt="${ droid.getId() }" data-description="<h3>${ droid.getName() }</h3>" data-max-width="1800" data-max-height="1350">
-	                                <div data-src="<c:url value="/resources/images/details-big/${ droid.getImageName() }.jpg" />" data-min-width="1300"></div>
-	                                <div data-src="<c:url value="/resources/images/details-big/${ droid.getImageName() }.jpg" />" data-min-width="1000"></div>
-	                                <div data-src="<c:url value="/resources/images/details-big/${ droid.getImageName() }.jpg" />" data-min-width="700"></div>
-	                                <div data-src="<c:url value="/resources/images/details-big/${ droid.getImageName() }.jpg" />" data-min-width="300"></div>
-	                                <div data-src="<c:url value="/resources/images/details-big/${ droid.getImageName() }.jpg" />" data-min-width="200"></div>
-	                                <div data-src="<c:url value="/resources/images/details-big/${ droid.getImageName() }.jpg" />" data-min-width="140"></div>
-	                                <div data-src="<c:url value="/resources/images/details-big/${ droid.getImageName() }.jpg" />"></div>
+	                            <div data-alt="${ droid.id }" data-description="<h3>${ droid.name }</h3>" data-max-width="1800" data-max-height="1350">
+	                                <div data-src="<c:url value="/resources/images/details-big/${ droid.imageName }.jpg" />" data-min-width="1300"></div>
+	                                <div data-src="<c:url value="/resources/images/details-big/${ droid.imageName }.jpg" />" data-min-width="1000"></div>
+	                                <div data-src="<c:url value="/resources/images/details-big/${ droid.imageName }.jpg" />" data-min-width="700"></div>
+	                                <div data-src="<c:url value="/resources/images/details-big/${ droid.imageName }.jpg" />" data-min-width="300"></div>
+	                                <div data-src="<c:url value="/resources/images/details-big/${ droid.imageName }.jpg" />" data-min-width="200"></div>
+	                                <div data-src="<c:url value="/resources/images/details-big/${ droid.imageName }.jpg" />" data-min-width="140"></div>
+	                                <div data-src="<c:url value="/resources/images/details-big/${ droid.imageName }.jpg" />"></div>
 	                                <noscript>
-	                                    <img src="<c:url value="/resources/images/details-big/${ droid.getImageName() }.jpg" />" alt="${ droid.getName() }"/>
+	                                    <img src="<c:url value="/resources/images/details-big/${ droid.imageName }.jpg" />" alt="${ droid.name }"/>
 	                                </noscript>
 	                            </div>
                         	</li>

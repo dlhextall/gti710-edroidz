@@ -28,16 +28,16 @@
 						<c:when test="${loop.index == 0}"><div class="item active"></c:when>
 						<c:otherwise><div class="item"></c:otherwise>
 					</c:choose>
-	                    <img src="<c:url value="/resources/images/carousel/${ droid.getPromoImgName() }.jpg" />" alt="${ droid.getName() }">
+	                    <img src="<c:url value="/resources/images/carousel/${ droid.promoImgName }.jpg" />" alt="${ droid.name }">
 	                    <div class="container">
 	                        <div class="carousel-caption">
-	                            <h1>${ droid.getName() }</h1>
+	                            <h1>${ droid.name }</h1>
 	                            <div class="description">
 	                                <p>${ droid.getDescription() }</p>
-	                                <p class="indexPrice">${ droid.getPrice() }$</p>
+	                                <p class="indexPrice">${ droid.price }$</p>
 	                            </div>   
 	                            <div class="detailLink">
-	                                <p class="text-right"><a href="/edroidz/detail?id=${ droid.getId() }" class="btn btn-default show-id">Détails</a></p>
+	                                <p class="text-right"><a href="/edroidz/detail?id=${ droid.id }" class="btn btn-default show-id">Détails</a></p>
 	                            </div>
 	                        </div>
 	                    </div>
