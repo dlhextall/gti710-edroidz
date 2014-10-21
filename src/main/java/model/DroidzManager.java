@@ -2,7 +2,7 @@ package model;
 
 import java.util.ArrayList;
 
-public class DroidzManager
+public class DroidzManager implements ManagerInterface
 {	
 	private static DroidzManager instance;
 	private DroidzStub stub = new DroidzStub();
