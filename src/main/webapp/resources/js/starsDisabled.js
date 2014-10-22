@@ -2,16 +2,16 @@
 var __slice = [].slice;
 
 (function($, window) {
-    var Starrr = null;
+    var Starrr2 = null;
 
-    Starrr = (function() {
-        Starrr.prototype.defaults = {
+    Starrr2 = (function() {
+        Starrr2.prototype.defaults = {
             rating: void 0,
             numStars: 5,
             change: function(e, value) {}
         };
 
-        function Starrr($el, options) {
+        function Starrr2($el, options) {
             var i, _ref,
                 _this = this;
 
@@ -24,10 +24,9 @@ var __slice = [].slice;
                     this.options[i] = this.$el.data(i);
                 }
             }
-            
             this.createStars();
             this.syncRating();
-            
+            /*
             this.$el.on('mouseover.starrr', 'i', function(e) {
                 return _this.syncRating(_this.$el.find('i').index(e.currentTarget) + 1);
             });
@@ -36,11 +35,11 @@ var __slice = [].slice;
             });
             this.$el.on('click.starrr', 'i', function(e) {
                 return _this.setRating(_this.$el.find('i').index(e.currentTarget) + 1);
-            });
+            });*/
             this.$el.on('starrr:change', this.options.change);
         }
 
-        Starrr.prototype.createStars = function() {
+        Starrr2.prototype.createStars = function() {
             var _i, _ref, _results;
 
             _results = [];
@@ -50,23 +49,17 @@ var __slice = [].slice;
             return _results;
         };
 
-        Starrr.prototype.setRating = function(rating) {
+        Starrr2.prototype.setRating = function(rating) {
         	
             if (this.options.rating === rating) {
                 rating = void 0;
-                document.getElementById("hiddenScore").setAttribute("value", 0);
-            	document.getElementById("stars-existing").setAttribute("data-rating", 0);
             }
-            else {
-            	document.getElementById("hiddenScore").setAttribute("value", rating);
-            	document.getElementById("stars-existing").setAttribute("data-rating", rating);
-			}
             this.options.rating = rating;
             this.syncRating();
-            return this.$el.trigger('starrr:change', rating);
+            return this.$el.trigger('starrr2:change', rating);
         };
 
-        Starrr.prototype.syncRating = function(rating) {
+        Starrr2.prototype.syncRating = function(rating) {
             var i, _i, _j, _ref;
 
             rating || (rating = this.options.rating);
@@ -85,11 +78,11 @@ var __slice = [].slice;
             }
         };
 
-        return Starrr;
+        return Starrr2;
 
     })();
     return $.fn.extend({
-        starrr: function() {
+        starrr2: function() {
             var args, option;
 
             option = arguments[0], args = 2 <= arguments.length ? __slice.call(arguments, 1) : [];
@@ -98,7 +91,7 @@ var __slice = [].slice;
                 
                 data = $(this).data('star-rating');                
                 if (!data) {
-                    $(this).data('star-rating', (data = new Starrr($(this), option)));
+                    $(this).data('star-rating', (data = new Starrr2($(this), option)));
                 }
                 if (typeof option === 'string') {
                     return data[option].apply(data, args);
@@ -109,16 +102,16 @@ var __slice = [].slice;
 })(window.jQuery, window);
 
 $(function() {
-    return $(".starrr").starrr();
+    return $(".starrr2").starrr2();
 });
 
 $( document ).ready(function() {
       
-  $('#stars').on('starrr:change', function(e, value){
+  $('#stars').on('starrr2:change', function(e, value){
     $('#count').html(value);
   });
   
-  $('#stars-existing').on('starrr:change', function(e, value){
+  $('#stars-existing').on('starrr2:change', function(e, value){
     $('#count-existing').html(value);
   });
 });

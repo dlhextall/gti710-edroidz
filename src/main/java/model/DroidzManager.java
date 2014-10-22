@@ -39,4 +39,13 @@ public class DroidzManager implements ManagerInterface
 		
 		return null;
 	}
+
+	public void addComment(int droidId, int score, String description)
+	{
+		//Comment id vraiment necessaire?
+		int commentId = 0;
+		Droid droid = getDroid(droidId);
+		Comment comment = new Comment(commentId, description, score);
+		droid.addComment(comment);
+	}
 }

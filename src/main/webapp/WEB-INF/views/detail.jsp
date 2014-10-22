@@ -1,6 +1,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page contentType="text/html; charset=UTF-8" %>
 <%@ page session="true" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -142,7 +143,7 @@
         <div class="row show-buying">
             <div class="container form-horizontal">
                 <h2>Achat</h2>
-                	<form action="/edroidz/panier/" class="form-horizontal" role="form">
+                	<form action="/edroidz/panier/" class="form-horizontal">
 	                    <div class="form-group">
 	                        <label for="nbTickets" class="col-sm-4 control-label">Nombre d'androïde</label>
 	                        <div class="col-sm-6">
@@ -179,55 +180,32 @@
                 <p>productssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss</p>
             </div>
         </div>
-		
-		<!--
-		<div class="comment">
-            <div class="container">
-                <h2>Votre appréciation du produit</h2>
-                <textarea id="userComment" name="userComment" placeholder="Votre commentaire" required type="text"  maxlength="250" cols="1" rows="1"></textarea>            
-                <div class="col-md-10 text-right">
-                    <div class="rating">
-                        <label id="note" for="rating">Note</label>
-                        <input type="radio" name="rating" value="0" checked /><span id="hideStars"></span>
-                        <input type="radio" name="rating" value="1" /><span></span>
-                        <input type="radio" name="rating" value="2" /><span></span>
-                        <input type="radio" name="rating" value="3" /><span></span>
-                        <input type="radio" name="rating" value="4" /><span></span>
-                        <input type="radio" name="rating" value="5" /><span></span>
-                    </div> 
-	            	<button type="submit" id='form_btn' class="btn btn-default">Envoyer</button>                       
-	            </div>
-            </div>
-        </div>-->
         
         <div class="comment">
             <div class="container">
                 <h2>Votre appréciation du produit</h2>
-                <textarea id="userComment" name="userComment" placeholder="Votre commentaire" required type="text"  maxlength="250" cols="1" rows="1"></textarea>   
-                <div id="stars-existing" class="starrr" data-rating='4'></div>         
-                <div class="col-md-10 text-right">
-	            	<button type="submit" id='form_btn' class="btn btn-default">Envoyer</button>                       
-	            </div>
+                <form:form role="form" id="frmCheckout" modelAttribute="commentForm" method="POST">
+                	<form:input path="comment" type="text" min="0" max="350" class="form-control smaller" placeholder="Votre commentaire" id="comment" required="true" />
+                	<form:errors path="comment" />
+	                <form:input  type="hidden" path="score" id="hiddenScore" value="${ comment.score }"/>
+	                <div id="stars-existing" class="starrr" data-rating='${ comment.score }' disabled="false"></div>
+	                <div class="col-md-10 text-right">
+		            	<button type="submit" id='form_btn' class="btn btn-default">Envoyer</button>                       
+		            </div>
+	            </form:form>
             </div>
         </div>
+                
         
-        
-        
-        
-        <!--
         <div class="container">
-            <div class="oldCommentContainer">
-                <textarea class="oldComment" name="userComment" required type="text"  maxlength="250" cols="1" rows="1" enabled="false">Bla blbablablaB lablbablablaBl ablbabla blaBlablbablablaBlablbablabl aBlablbabla blaB lablbablablaBlablbablablaBlabl bablablaBl</textarea>
-                <div class="rating2">
-                    <input type="radio" name="rating" value="0" disabled="disabled"/><span id="hideStars"></span>
-                    <input type="radio" name="rating" value="1" disabled="disabled"/><span></span>
-                    <input type="radio" name="rating" value="2" disabled="disabled"/><span></span>
-                    <input type="radio" name="rating" value="3" disabled="disabled" checked /><span></span>
-                    <input type="radio" name="rating" value="4" disabled="disabled"/><span></span>
-					<input type="radio" name="rating" value="5" disabled="disabled"/><span></span>
-              	</div> 
-            </div>
-        </div>-->
+        	<c:forEach items="${ droid.commentsList }" var="curComment" varStatus="loop">
+	            <div class="oldCommentContainer">
+	            	<p class="oldComment">${ curComment.comment }</p>
+	                <div class="starrr2 rating2" data-rating='${ curComment.score }' disabled="true"></div>
+	                <p></p>
+	            </div>
+            </c:forEach>
+        </div>
 
         <!-- Footer -->
         <%@ include file="templates/footer.jsp" %>
@@ -238,6 +216,7 @@
         <!-- Custom javascript -->
         
         <script src="<c:url value="/resources/js/stars.js" />"></script>
+        <script src="<c:url value="/resources/js/starsDisabled.js" />"></script>
         
 	</body>
 </html>

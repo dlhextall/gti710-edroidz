@@ -42,7 +42,7 @@ public class Droid
 	}
 	
 	public void addComment(Comment comment) {
-		commentsList.add(comment);
+		commentsList.add(0, comment);
 	}
 
 	public int getId() {

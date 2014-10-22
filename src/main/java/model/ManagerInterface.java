@@ -9,5 +9,6 @@ public interface ManagerInterface {
 	public ArrayList<Droid> getPromoList();
 
 	public Droid getDroid(int droidId);
-
+	
+	public void addComment(int droidId, int score, String comment);
 }
