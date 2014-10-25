@@ -2,6 +2,7 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 <%@ page session="true" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -143,11 +144,10 @@
         <div class="row show-buying">
             <div class="container form-horizontal">
                 <h2>Achat</h2>
-                	<form action="/edroidz/panier/" class="form-horizontal">
 	                    <div class="form-group">
-	                        <label for="nbTickets" class="col-sm-4 control-label">Nombre d'androïde</label>
+	                        <label for="nbDroids" class="col-sm-4 control-label">Nombre d'androïde</label>
 	                        <div class="col-sm-6">
-	                            <select name="nbTickets" id="nbTickets" class="form-control">
+	                            <select name="nbDroids" id="nbDroids" class="form-control">
 	                                <option value="1">1</option>
 	                                <option value="2">2</option>
 	                                <option value="3">3</option>
@@ -158,19 +158,15 @@
 	                    <div class="form-group">
 	                        <label for="totalPrice" class="col-sm-4 control-label">Total</label>
 	                        <div class="col-sm-6">
-	                            <input name="totalPrice" id='totalPrice' type="text" class="form-control" value="8199,99" readonly>
+	                            <input name="totalPrice" id='totalPrice' type="text" class="form-control" value="<fmt:formatNumber value='${ droid.price }' minFractionDigits='2' maxFractionDigits='2' />" readonly>
 	                            <input type="hidden" id='idDroid' name="idDroid" value="${ droid.id }">
 	                            <input type="hidden" id='unityPrice' name="unityPrice" value="${ droid.price }">
-	                            <input type="hidden" id='nomDroid' name="nomDroid" value="${ droid.name }">
-	                            <!-- <input type="hidden" id='nomBilletPanier' name="nomBilletPanier" value="">  -->
 	                        </div>
 	                    </div>
 	                    <div class="clearfix"></div>
 	                    <div class="col-md-10 text-right">
 	                        <button type="submit" id='form_btn' class="btn btn-default">Ajouter au panier</button>                       
-	                    </div>
-                   </form>
-                
+	                    </div>                
             </div>
         </div>
 		
@@ -188,6 +184,7 @@
                 	<form:input path="comment" type="text" min="0" max="350" class="form-control smaller" placeholder="Votre commentaire" id="comment" required="true" />
                 	<form:errors path="comment" />
 	                <form:input  type="hidden" path="score" id="hiddenScore" value="${ comment.score }"/>
+	                <!-- L'attribut disabled est utiliser dans le javascript, ne pas y toucher! -->
 	                <div id="stars-existing" class="starrr" data-rating='${ comment.score }' disabled="false"></div>
 	                <div class="col-md-10 text-right">
 		            	<button type="submit" id='form_btn' class="btn btn-default">Envoyer</button>                       
@@ -201,6 +198,7 @@
         	<c:forEach items="${ droid.commentsList }" var="curComment" varStatus="loop">
 	            <div class="oldCommentContainer">
 	            	<p class="oldComment">${ curComment.comment }</p>
+	            	<!-- L'attribut disabled est utiliser dans le javascript, ne pas y toucher! -->
 	                <div class="starrr2 rating2" data-rating='${ curComment.score }' disabled="true"></div>
 	                <p></p>
 	            </div>
@@ -215,6 +213,7 @@
 
         <!-- Custom javascript -->
         
+        <script src="<c:url value="/resources/js/detail.js" />"></script>
         <script src="<c:url value="/resources/js/stars.js" />"></script>
         <script src="<c:url value="/resources/js/starsDisabled.js" />"></script>
         

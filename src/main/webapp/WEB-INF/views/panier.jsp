@@ -30,100 +30,86 @@
 					        </tr>
 				        </thead>
 					    
-					    <tbody>			          		
-				            <tr>
-				              <td class="col-sm-8 col-md-6">
-				                <div class="media">
-				                  <a class="thumbnail pull-left" href="#"> <img class="media-object" src="<c:url value="/resources/images/details-thumb/52.jpg" />" style="width: 72px; height: 72px;"> </a>
-				                  <div class="media-body">
-				                   <h4 class="media-heading"><a href="/edroidz/detail?id=1">Androïde DrZ60</a></h4>
-				                   <span>Statut: </span><span class="text-success"><strong>En Stock</strong></span>
-				                  </div>
-				                </div>
-				              </td>
-				              <td class="col-sm-1 col-md-1" style="text-align: center">
-				                <label  class="form-control" id="exampleInputEmail1" value="2">2</label>
-				              </td>
-				              <td class="col-sm-1 col-md-1 text-center"><strong> 199</strong></td>
-				              <td class="col-sm-1 col-md-1 text-center"><strong>398</strong></td>
-				              <td class="col-sm-1 col-md-1">
-				              <a href="/edroidz/panier/" type="button" class="btn btn-danger">
-				                <span class="glyphicon glyphicon-remove"></span> Enlever
-				              </a></td>
-				            </tr>
-				           
-				            <tr>
-				              <td class="col-sm-8 col-md-6">
-				                <div class="media">
-				                  <a class="thumbnail pull-left" href="#"> <img class="media-object" src="<c:url value="/resources/images/details-thumb/52.jpg" />" style="width: 72px; height: 72px;"> </a>
-				                  <div class="media-body">
-				                   <h4 class="media-heading"><a href="/edroidz/detail?id=1">Prototype Viking Balix</a></h4>
-				                   <span>Statut: </span><span class="text-success"><strong>En Stock</strong></span>
-				                  </div>
-				                </div>
-				              </td>
-				              <td class="col-sm-1 col-md-1" style="text-align: center">
-				                <label  class="form-control" id="exampleInputEmail1" value="3">3</label>
-				              </td>
-				              <td class="col-sm-1 col-md-1 text-center"><strong> 199</strong></td>
-				              <td class="col-sm-1 col-md-1 text-center"><strong>597</strong></td>
-				              <td class="col-sm-1 col-md-1">
-				              <a href="/edroidz/panier/" type="button" class="btn btn-danger">
-				                <span class="glyphicon glyphicon-remove"></span> Enlever
-				              </a></td>
-				            </tr>
-				           
+					    <tbody>			
+					    	<c:forEach items="${ panier.getListLignePanier() }" var="ligne" varStatus="loop">          		
 					            <tr>
-					             <td>   </td>
-					             <td>   </td>
-					             <td>   </td>
-					             <td><h5>Sous-Total</h5></td>
-					             <td class="text-right"><h5><strong>995</strong></h5></td>
+					              <td class="col-sm-8 col-md-6">
+					                <div class="media">
+					                  <a class="thumbnail pull-left" href="/edroidz/detail/${ ligne.droid.id }"> <img class="media-object" src="<c:url value="/resources/images/details-thumb/${ ligne.droid.imageName }.jpg" />" style="width: 72px; height: 72px;"> </a>
+					                  <div class="media-body">
+					                   <h4 class="media-heading"><a href="/edroidz/detail/${ ligne.droid.id }">${ ligne.droid.name }</a></h4>
+					                   <span>Statut: </span><span class="text-success"><strong>${ ligne.getStatus() }</strong></span>
+					                  </div>
+					                </div>
+					              </td>
+					              <td class="col-sm-1 col-md-1" style="text-align: center">
+					                <label  class="form-control" id="exampleInputEmail1" value="${ ligne.nbDroids }">${ ligne.nbDroids }</label>
+					              </td>
+					              <td class="col-sm-1 col-md-1 text-center"><strong>${ ligne.droid.price }</strong></td>
+					              <td class="col-sm-1 col-md-1 text-center"><strong>${ ligne.getTotalRound() }</strong></td>
+					              <td class="col-sm-1 col-md-1 text-right">
+					              <a href="/edroidz/panier/delete?id=${ loop.index }" type="button" class="btn btn-danger">
+					                <span class="glyphicon glyphicon-remove"></span> Retirer
+					              </a></td>
 					            </tr>
+				            </c:forEach>
+				           
+					        <tr>
+					        	<td>   </td>
+					            <td>   </td>
+					            <td>   </td>
+					            <td><h5>Sous-Total</h5></td>
+					            <td class="text-right"><h5><strong>${ panier.getSousTotalRound() }</strong></h5></td>
+					        </tr>
                                 
-                                <tr>
-					             <td>   </td>
-					             <td>   </td>
-					             <td>   </td>
-					             <td><h5>TPS (5%)</h5></td>
-					             <td class="text-right"><h5><strong>49.75</strong></h5></td>
-					            </tr>
+                            <tr>
+					            <td>   </td>
+					            <td>   </td>
+					            <td>   </td>
+					            <td><h5>TPS (5%)</h5></td>
+					            <td class="text-right"><h5><strong>${ panier.getTpsRound() }</strong></h5></td>
+					        </tr>
                                 
-                                <tr>
-					             <td>   </td>
-					             <td>   </td>
-					             <td>   </td>
-					             <td><h5>TVQ (10%)</h5></td>
-					             <td class="text-right"><h5><strong>99.50</strong></h5></td>
-					            </tr>
+                            <tr>
+					            <td>   </td>
+					            <td>   </td>
+					            <td>   </td>
+					            <td><h5>TVQ (10%)</h5></td>
+					            <td class="text-right"><h5><strong>${ panier.getTvqRound() }</strong></h5></td>
+					        </tr>
 					            
-					            <tr>
-					             <td>   </td>
-					             <td>   </td>
-					             <td>   </td>
-					             <td><h3>Total</h3></td>
-					             <td class="text-right"><h3><strong>1144.25</strong></h3></td>
-					            </tr>
-					            <tr>
-					             <td>   </td>
-					             <td>   </td>
-					             <td>   </td>
-					             <td>
-					              <a href="/edroidz/catalogue"><button  type="button" class="btn btn-default"><span class="glyphicon glyphicon-shopping-cart"></span> Continue Shopping</button></a>
-					             </td>
-					             <td>
-					              <button type="submit" class="btn btn-success">Checkout <span class="glyphicon glyphicon-play"></span></button>
+					        <tr>
+					            <td>   </td>
+					            <td>   </td>
+					            <td>   </td>
+					            <td><h3>Total</h3></td>
+					            <td class="text-right"><h3><strong>${ panier.getPrixTotalRound() }</strong></h3></td>
+					        </tr>
+					        
+					        <tr>
+					            <td>   </td>
+					            <td>   </td>
+					            <td>   </td>
+					            <td>
+					            	<a href="/edroidz/catalogue"><button  type="button" class="btn btn-default"><span class="glyphicon glyphicon-shopping-cart"></span> Continuer à magasiner</button></a>
+					            </td>
+					            <td class="col-sm-1 col-md-1 text-right">
+						            <c:choose>
+										<c:when test="${ panier.isEmpty() }">
+											<button type="submit" class="btn btn-success" disabled>Paiement <span class="glyphicon glyphicon-play"></span></button>
+										</c:when>
+										<c:otherwise>
+											<button type="submit" class="btn btn-success">Paiement <span class="glyphicon glyphicon-play"></span></button>
+										</c:otherwise>
+									</c:choose>					            	
 					            </td>
 				            </tr>
 					               
 			          	</tbody>
-			       	</table>
-		        
-	      		</form>
-		        
+			       	</table>		        
+	      		</form>		        
 	      	</div>
 	  	</div>	
-
 
 		<!-- Footer -->
         <%@ include file="templates/footer.jsp" %>
@@ -131,8 +117,7 @@
         <!-- FooterComponents -->
         <%@ include file="templates/baseFooterComponents.jsp" %>
 
-        <!-- Custom javascript -->
-        
+        <!-- Custom javascript -->        
 	        
 	</body>
 </html>
