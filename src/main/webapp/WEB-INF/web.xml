@@ -15,7 +15,7 @@
 	</listener>
 	
 	<listener>
-		<listener-class>ca.etsmtl.edroidz.GestionnaireSession</listener-class>
+		<listener-class>ca.etsmtl.edroidz.SessionManager</listener-class>
 	</listener>
 
 	<!-- Processes application requests -->
