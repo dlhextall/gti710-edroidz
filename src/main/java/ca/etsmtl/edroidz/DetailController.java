@@ -25,7 +25,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 @Controller
 public class DetailController {
 	
-	private static final Logger logger = Logger.getLogger(CheckoutController.class);
+	private static final Logger logger = Logger.getLogger(DetailController.class);
 	
 	/**
 	 * Simply selects the home view to render by returning its name.
@@ -63,7 +63,7 @@ public class DetailController {
 		
 		int score = _commentForm.getScore();
 		String comment = _commentForm.getComment();
-		DroidzManager.getInstance().addComment(49, score, comment);
+		DroidzManager.getInstance().addComment(_droidId, score, comment);
 		
 		return model;
 	}
