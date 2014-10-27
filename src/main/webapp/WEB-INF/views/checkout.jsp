@@ -16,6 +16,8 @@
         <%@ include file="templates/header.jsp" %>
         
         <div class="container">
+        	<div class='col-md-2'></div>
+        	<div class='col-md-8'>
             <h2>Veuillez remplir les informations ci-dessous</h2>
             <hr/>
             <form:form role="form" id="frmCheckout" modelAttribute="checkoutForm" method="POST">
@@ -149,6 +151,7 @@
                     </div>
                 </div>
             </form:form>
+        </div>
         </div>
      
 

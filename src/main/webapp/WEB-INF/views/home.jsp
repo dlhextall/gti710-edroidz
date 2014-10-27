@@ -37,7 +37,7 @@
 	                                <p class="indexPrice">${ droid.price }$</p>
 	                            </div>   
 	                            <div class="detailLink">
-	                                <p class="text-right"><a href="/edroidz/detail?id=${ droid.id }" class="btn btn-default show-id">Détails</a></p>
+	                                <p class="text-right"><a href="/edroidz/detail/${ droid.id }" class="btn btn-default show-id">Détails</a></p>
 	                            </div>
 	                        </div>
 	                    </div>
@@ -51,15 +51,18 @@
     
         <!-- feature info -->
         <div id="featuredInfo" class="container">
-            <div class="row">
-                <div class="col-md-8">
-                <h1> </h1>
-                </div>
-                <div class="col-md-4">
-                </div>
+        	<div class='col-md-3'></div>
+            <div class='col-md-6'>
+           		<div class="row">
+	                <div class="col-md-8">
+	                <h1> </h1>
+	                </div>
+	                <div class="col-md-4">
+	                </div>
+	            </div>
+	            <div class="description"></div>
+	            <div class="detailLink"></div>
             </div>
-            <div class="description"></div>
-            <div class="detailLink"></div>
         </div>
 
         <!-- Footer -->

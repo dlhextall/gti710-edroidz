@@ -20,14 +20,14 @@
     	<!-- Header -->
         <%@ include file="templates/header.jsp" %>
         
+       <div class='container'>
         <div class="row show-preview">
-            <div class="container">
-                <div class="col-md-6">
+            <div>
+                <div class="col-md-3">
                     <h2>${ droid.name }</h2>
                     <h4>Compétences</h4>
                     <div class="skills">
-                    	<div class="skill">
-                            
+                    	<div class="skill">                            
                             <c:choose>
 								<c:when test="${ droid.canCombat }">
 									<img src="<c:url value="/resources/images/skills/combatOn.png" />" width="40px" height="40px">
@@ -113,88 +113,78 @@
                       	</div>
                    	</div>
                 </div>
-                <div class="col-md-6 decalage">
+                <div class='col-md-5' >
+                	<h2>Description</h2>		               
+		                <div class="col-md-12" style="padding-left: 0px;">		                	
+		                    <div class="list-group list-group-item">
+		                    	<p class="list-group-item-text">${ droid.description }</p>
+		                    </div>
+		                </div>                
+                </div>
+                
+                <div class="col-md-4 decalage">
                     <img src="<c:url value="/resources/images/details/${ droid.imageName }.jpg" />" width="310px" height="367px">
                 </div>
             </div>
         </div>
-
-        <!-- Show details -->
-        <div class="row show-details">
-            <div class="container">
-                <h2>Description</h2>
-                <!--<div class="col-md-12">
-                	<h3>Description</h3>
-                    <p>Edgy festival.</p>
-                </div>-->
-                <div class="col-md-12">
-                	<!--<h3>Artistes</h3>-->
-                    <div class="list-group list-group-item">
-                    	
-                    	<!--<a href="#" class="list-group-item">-->
-                    		<p class="list-group-item-text">${ droid.description }</p>
-                    	<!--</a>-->
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
+        
 
         <!-- Ticket option -->
         <div class="row show-buying">
-            <div class="container form-horizontal">
+            <div class=" form-horizontal">
                 <h2>Achat</h2>
-	                    <div class="form-group">
-	                        <label for="nbDroids" class="col-sm-4 control-label">Nombre d'androïde</label>
-	                        <div class="col-sm-6">
-	                            <select name="nbDroids" id="nbDroids" class="form-control">
-	                                <option value="1">1</option>
-	                                <option value="2">2</option>
-	                                <option value="3">3</option>
-	                                <option value="4">4</option>
-	                            </select>
-	                        </div>
-	                    </div>	                   
-	                    <div class="form-group">
-	                        <label for="totalPrice" class="col-sm-4 control-label">Total</label>
-	                        <div class="col-sm-6">
-	                            <input name="totalPrice" id='totalPrice' type="text" class="form-control" value="<fmt:formatNumber value='${ droid.price }' minFractionDigits='2' maxFractionDigits='2' />" readonly>
-	                            <input type="hidden" id='idDroid' name="idDroid" value="${ droid.id }">
-	                            <input type="hidden" id='unityPrice' name="unityPrice" value="${ droid.price }">
-	                        </div>
-	                    </div>
-	                    <div class="clearfix"></div>
-	                    <div class="col-md-10 text-right">
-	                        <button type="submit" id='form_btn' class="btn btn-default">Ajouter au panier</button>                       
-	                    </div>                
+                <div class="form-group">
+                    <label for="nbDroids" class="col-sm-4 control-label">Nombre d'androïde</label>
+                    <div class="col-sm-6">
+                        <select name="nbDroids" id="nbDroids" class="form-control">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                    </div>
+                </div>	                   
+                <div class="form-group">
+                    <label for="totalPrice" class="col-sm-4 control-label">Total</label>
+                    <div class="col-sm-6">
+                        <input name="totalPrice" id='totalPrice' type="text" class="form-control" value="<fmt:formatNumber value='${ droid.price }' minFractionDigits='2' maxFractionDigits='2' />" readonly>
+                        <input type="hidden" id='idDroid' name="idDroid" value="${ droid.id }">
+                        <input type="hidden" id='unityPrice' name="unityPrice" value="${ droid.price }">
+                    </div>
+                </div>
+                
+                <div class="col-md-10 text-right">
+                    <button type="submit" id='form_btn' class="btn btn-default">Ajouter au panier</button>                       
+                </div>                
             </div>
         </div>
-		
-        <div class="amazone">
-            <div class="container">
-                <h2>Amazone</h2>
-                <p>productssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss</p>
-            </div>
-        </div>
+		<div class='row'>               
+	        <div class="amazone">            
+		        <h2>Amazone</h2>
+		        <p>productssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss</p>           
+	        </div>		    
+		</div>
         
-        <div class="comment">
-            <div class="container">
-                <h2>Votre appréciation du produit</h2>
-                <form:form role="form" id="frmCheckout" modelAttribute="commentForm" method="POST">
-                	<form:input path="comment" type="text" min="0" max="350" class="form-control smaller" placeholder="Votre commentaire" id="comment" required="true" />
-                	<form:errors path="comment" />
-	                <form:input  type="hidden" path="score" id="hiddenScore" value="${ comment.score }"/>
-	                <!-- L'attribut disabled est utiliser dans le javascript, ne pas y toucher! -->
-	                <div id="stars-existing" class="starrr" data-rating='${ comment.score }' disabled="false"></div>
-	                <div class="col-md-10 text-right">
-		            	<button type="submit" id='form_btn' class="btn btn-default">Envoyer</button>                       
-		            </div>
-	            </form:form>
+        <div class="row">
+            <div class='comment'>
+                <div class='col-md-6'>
+                	<h2>Votre appréciation du produit</h2>
+	                <form:form role="form" id="frmCheckout" modelAttribute="commentForm" method="POST">
+	                	<form:input path="comment" type="text" min="0" max="350" class="form-control smaller" placeholder="Votre commentaire" id="comment" required="true" />
+	                	<form:errors path="comment" />
+		                <form:input  type="hidden" path="score" id="hiddenScore" value="${ comment.score }"/>
+		                <!-- L'attribut disabled est utiliser dans le javascript, ne pas y toucher! -->
+		                <div id="stars-existing" class="starrr" data-rating='${ comment.score }' disabled="false"></div>
+		                <div class=" text-right">
+			            	<button type="submit" id='form_btn' class="btn btn-default">Envoyer</button>                       
+			            </div>
+		            </form:form>                
+                </div>
             </div>
         </div>
                 
         
-        <div class="container">
+        <div class='row'>
         	<c:forEach items="${ droid.commentsList }" var="curComment" varStatus="loop">
 	            <div class="oldCommentContainer">
 	            	<p class="oldComment">${ curComment.comment }</p>
@@ -203,6 +193,8 @@
 	                <p></p>
 	            </div>
             </c:forEach>
+        </div>
+        
         </div>
 
         <!-- Footer -->
