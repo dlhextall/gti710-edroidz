@@ -15,14 +15,8 @@ public class ConfirmController{
 
 	@RequestMapping(value = "/confimation", method = RequestMethod.GET)
 	public ModelAndView Confirm(HttpServletRequest _req) {
-		ModelAndView model = new ModelAndView("Confirmation");
 		
+		ModelAndView model = new ModelAndView("Confirmation");		
 		return model;
 	}
-
-	
-	
-	
-	
-	
 }

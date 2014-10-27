@@ -48,4 +48,13 @@ public class DroidzManager implements ManagerInterface
 		Comment comment = new Comment(commentId, description, score);
 		droid.addComment(comment);
 	}
+
+	@Override
+	public String pay(CheckoutForm checkoutForm, Panier panier) {
+
+		//Ajouter a la BD les lignes reservations et le formulaire contenant les infos client
+		//Retourne le numero de confirmation, on considere que le paiement est toujours accepter
+		
+		return "AH67DA92JB8M";
+	}
 }

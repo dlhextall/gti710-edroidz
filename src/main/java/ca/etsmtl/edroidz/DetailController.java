@@ -51,12 +51,12 @@ public class DetailController {
 		
 		ModelAndView model = new ModelAndView("redirect:/detail/" + _droidId);
 		
-		//Errors in checkout form
+		//Errors in comment form
 		if (_res.hasErrors()) {			 
 			model.addObject("errors", _res.getAllErrors());
-			logger.error("CheckoutForm has errors");
+			logger.error("CommentForm has errors");
 			for (ObjectError err : _res.getAllErrors()) {
-				logger.error("CheckoutForm error : " + err);
+				logger.error("CommentForm error : " + err);
 			}
 			return model;
 		}

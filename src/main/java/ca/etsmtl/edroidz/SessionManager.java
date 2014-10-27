@@ -33,6 +33,7 @@ public class SessionManager implements HttpSessionListener {
 		if(sessionEvent.getSession().getAttribute("panier") != null) {
 			int cptRestored=0;
 			Panier panier = (Panier)sessionEvent.getSession().getAttribute("panier");
+			panier.clearPanier();
 			/*List<LignePanier> billetPanier = panier.getLstBilletPanier();
 			
 			for(int i=0;i<billetPanier.size();i++){
@@ -48,7 +49,6 @@ public class SessionManager implements HttpSessionListener {
 		else
 			panier = new Panier();
 		
-		panier.clearPanier();
 		sessionEvent.getSession().setAttribute("panier", panier);
 		System.out.println("Session Timer Current time is :: "+ new Date());
 	}

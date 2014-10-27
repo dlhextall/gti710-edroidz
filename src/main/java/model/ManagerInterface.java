@@ -11,4 +11,6 @@ public interface ManagerInterface {
 	public Droid getDroid(int droidId);
 	
 	public void addComment(int droidId, int score, String comment);
+	
+	public String pay(CheckoutForm checkoutForm, Panier panier);
 }
