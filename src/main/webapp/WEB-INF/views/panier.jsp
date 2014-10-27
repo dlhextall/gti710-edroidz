@@ -15,6 +15,8 @@
         <%@ include file="templates/header.jsp" %>
         
         <div class="container">
+       	<div class='col-md-1'></div>
+       	<div class='col-md-10'>
 	      	<div class="row">
 	      		<form action="/edroidz/checkout" class="form-horizontal" role="form">
 	      		
@@ -109,6 +111,7 @@
 			       	</table>		        
 	      		</form>		        
 	      	</div>
+	  	</div>
 	  	</div>	
 
 		<!-- Footer -->
