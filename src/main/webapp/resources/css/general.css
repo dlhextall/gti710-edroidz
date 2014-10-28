@@ -12,11 +12,10 @@
 }
 
 .footer {
-    margin-top: 25px;
     background-color: #3D3234;
-    position:relative;	  
+    position:fixed;	  
+    bottom: 0px;
   	width: 100%;
-  	/* Set the fixed height of the footer here */
   	height: 60px;
 }
 
@@ -162,4 +161,8 @@ p.indexPrice {
 
 .comment {
 	margin-bottom: 20px;
+}
+
+.espace {
+	margin-bottom: 80px;
 }
