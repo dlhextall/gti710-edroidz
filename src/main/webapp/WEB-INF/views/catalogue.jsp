@@ -14,7 +14,32 @@
     	<!-- Header -->
         <%@ include file="templates/header.jsp" %>
         
-        <div class="container">		
+        <div class="container">	
+        	<nav class="navbar navbar-fixed-left navbar-minimal animate" role="navigation">
+				<div class="navbar-toggler animate">
+					<span class="menu-icon"></span>
+				</div>
+				<ul class="navbar-menu animate">
+					<li>
+						<a href="#about-us" class="animate">
+							<span class="desc animate"> DANNY </span>
+							<span class="glyphicon glyphicon-user"></span>
+						</a>
+					</li>
+					<li>
+						<a href="#blog" class="animate">
+							<span class="desc animate"> GO PLAY </span>
+							<span class="glyphicon glyphicon-info-sign"></span>
+						</a>
+					</li>
+					<li>
+						<a href="#contact-us" class="animate">
+							<span class="desc animate"> MASS EFFECT 3 </span>
+							<span class="glyphicon glyphicon-comment"></span>
+						</a>
+					</li>
+				</ul>
+			</nav>	
 			<div class="main">								
 				<div class="gamma-container gamma-loading" id="gamma-container">
 					<ul class="gamma-gallery">
@@ -41,6 +66,8 @@
 			</div><!--/main-->
 		</div>
 		
+		
+		
 		<!-- Footer -->
         <%@ include file="templates/footer.jsp" %>
         
@@ -53,7 +80,26 @@
 		<script src="<c:url value="/resources/js/js-url.min.js" />"></script>
 		<script src="<c:url value="/resources/js/jquerypp.custom.js" />"></script>
 		<script src="<c:url value="/resources/js/gamma.js" />"></script>
-		<script type="text/javascript">	
+		<script type="text/javascript">
+			$(function () {
+			    /* START OF DEMO JS - NOT NEEDED */
+			    if (window.location == window.parent.location) {
+			        $('#fullscreen').html('<span class="glyphicon glyphicon-resize-small"></span>');
+			        $('#fullscreen').attr('href', 'http://bootsnipp.com/mouse0270/snippets/PbDb5');
+			        $('#fullscreen').attr('title', 'Back To Bootsnipp');
+			    }    
+			    $('#fullscreen').on('click', function(event) {
+			        event.preventDefault();
+			        window.parent.location =  $('#fullscreen').attr('href');
+			    });
+			    $('#fullscreen').tooltip();
+			    /* END DEMO OF JS */
+			    
+			    $('.navbar-toggler').on('click', function(event) {
+					event.preventDefault();
+					$(this).closest('.navbar-minimal').toggleClass('open');
+				})
+			});
 		
 			$(function() {
 				
