@@ -6,7 +6,7 @@
 <html lang="en">
     <head>
         <%@ include file="templates/baseHeaderComponents.jsp" %>
-        <title>Panier</title>
+        <title>Confirmation</title>
         <!-- Script -->
 		<script src="<c:url value="/resources/js/modernizr.custom.70736.js" />"></script>
     </head>

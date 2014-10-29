@@ -7,7 +7,7 @@
 <html lang="en">
     <head>
         <%@ include file="templates/baseHeaderComponents.jsp" %>
-        <title>Panier</title>
+        <title>Checkout</title>
         <!-- Script -->
 		<script src="<c:url value="/resources/js/modernizr.custom.70736.js" />"></script>
     </head>    
@@ -15,7 +15,7 @@
     	<!-- Header -->
         <%@ include file="templates/header.jsp" %>
         
-        <div class="container">
+        <div class="container espace">
         	<div class='col-md-2'></div>
         	<div class='col-md-8'>
             <h2>Veuillez remplir les informations ci-dessous</h2>

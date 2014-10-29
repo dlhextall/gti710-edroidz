@@ -14,7 +14,7 @@
     	<!-- Header -->
         <%@ include file="templates/header.jsp" %>
         
-        <div class="container">
+        <div class="container espace">
        	<div class='col-md-1'></div>
        	<div class='col-md-10'>
 	      	<div class="row">
