@@ -169,7 +169,7 @@
             <div class='comment'>
                 <div class='col-md-6'>
                 	<h2>Votre appréciation du produit</h2>
-	                <form:form role="form" id="frmCheckout" modelAttribute="commentForm" method="POST">
+	                <form:form role="form" id="frmComment" modelAttribute="commentForm" method="POST">
 	                	<form:input path="comment" type="text" min="0" max="350" class="form-control smaller" placeholder="Votre commentaire" id="comment" required="true" />
 	                	<form:errors path="comment" />
 		                <form:input  type="hidden" path="score" id="hiddenScore" value="${ comment.score }"/>
