@@ -31,4 +31,12 @@ public class LignePanier {
 	public String getStatus() {
 		return "En Stock";
 	}
+
+	public void updateNbDroid(int _nbDroid) {
+		if(_nbDroid <= droid.getQuantityAvailable())
+			this.nbDroids = _nbDroid;
+		
+		System.out.println(droid.getQuantityAvailable());
+		System.out.println(nbDroids);
+	}
 }

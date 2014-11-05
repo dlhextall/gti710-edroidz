@@ -45,7 +45,8 @@
 					                </div>
 					              </td>
 					              <td class="col-sm-1 col-md-1" style="text-align: center">
-					                <label  class="form-control" id="exampleInputEmail1" value="${ ligne.nbDroids }">${ ligne.nbDroids }</label>
+					                <!--  <label  class="form-control" id="exampleInputEmail1" value="${ ligne.nbDroids }">${ ligne.nbDroids }</label> -->
+					                <input class="form-control" value="${ ligne.nbDroids }" type="number" min="1" max="4" onchange="update(${ loop.index }, this.value)">
 					              </td>
 					              <td class="col-sm-1 col-md-1 text-center"><strong>${ ligne.droid.price }</strong></td>
 					              <td class="col-sm-1 col-md-1 text-center"><strong>${ ligne.getTotalRound() }</strong></td>
@@ -121,6 +122,6 @@
         <%@ include file="templates/baseFooterComponents.jsp" %>
 
         <!-- Custom javascript -->        
-	        
+	    <script src="<c:url value="/resources/js/panier.js" />"></script>
 	</body>
 </html>

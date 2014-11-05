@@ -6,6 +6,7 @@ import java.util.Locale;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+import model.CommentForm;
 import model.Droid;
 import model.DroidzManager;
 import model.Panier;
@@ -14,9 +15,11 @@ import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.SessionAttributes;
+import org.springframework.web.servlet.ModelAndView;
 
 
 
@@ -40,7 +43,7 @@ public class PanierController {
 		
 		
 		//---------- TO DELETE AFTER TEST -----------
-		Droid droid = new Droid(49, 100, 4999.99, "Seyfried Model", "", "49", null, "img1",
+		Droid droid = new Droid(49, 3, 4999.99, "Seyfried Model", "", "49", null, "img1",
 				//combat, cook, garden, laundry, clean , dishes
 				true, true, true, true, true, true);
 		panier.addLignePanier(droid, 1);
@@ -101,5 +104,17 @@ public class PanierController {
 		}
 		
 		return "panier";
+	}
+	
+	@RequestMapping(value = "/panier/update/{ligneId}/{nbDroid}", method = RequestMethod.GET)
+	public ModelAndView update(@PathVariable("ligneId") int _ligneId, @PathVariable("nbDroid") int _nbDroid, 
+			HttpServletRequest _req) {
+		
+		HttpSession session = _req.getSession();
+		Panier panier = (Panier) session.getAttribute("panier");
+		panier.update(_ligneId, _nbDroid);		
+		ModelAndView model = new ModelAndView("redirect:/panier");
+				
+		return model;
 	}
 }

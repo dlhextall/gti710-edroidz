@@ -70,4 +70,8 @@ public class Panier{
 	public boolean isEmpty() {
 		return listLignePanier.isEmpty();
 	}
+
+	public void update(int _ligneId, int _nbDroid) {
+		listLignePanier.get(_ligneId).updateNbDroid(_nbDroid);
+	}
 }

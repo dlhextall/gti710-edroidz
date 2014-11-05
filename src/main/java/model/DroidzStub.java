@@ -27,7 +27,7 @@ public class DroidzStub
 		commentList = new ArrayList<Comment>();
 		commentList.add(comment3);
 		description = "Description à venir.";
-		droid = new Droid(49, 100, 4999.99, "Seyfried Model", description, "49", commentList, "img1",
+		droid = new Droid(49, 3, 4999.99, "Seyfried Model", description, "49", commentList, "img1",
 				//combat, cook, garden, laundry, clean , dishes
 				true, true, true, true, true, true);
 		droidList.add(droid);

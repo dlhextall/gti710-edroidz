@@ -79,16 +79,8 @@ public class CheckoutController {
 		}
 		
 		HttpSession session = _req.getSession();
-		Panier panier = (Panier) session.getAttribute("panier");
+		session.setAttribute("checkoutForm", _checkoutForm);
 		model = new ModelAndView("redirect:/confirmation");
-		
-		//Effectue le paiement, retourne le numero de confirmation
-		String noConfirmation = DroidzManager.getInstance().pay(_checkoutForm, panier);
-		
-		model.addObject("noConfirmation", noConfirmation );
-		model.addObject("panier", panier );
-		//BUGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG
-		//model.addObject("checkoutForm2", _checkoutForm );
 		
 		return model;
 	}
