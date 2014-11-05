@@ -23,7 +23,8 @@ public class SessionManager implements HttpSessionListener {
 
 	@Override
 	public void sessionCreated(HttpSessionEvent sessionEvent) {
-
+		
+		//Reseter le DroidManager pour avoir la nouvelle liste de droid.
 		panier = new Panier();
 		checkoutForm = new CheckoutForm();
 		sessionEvent.getSession().setAttribute("panier", panier);
@@ -33,7 +34,8 @@ public class SessionManager implements HttpSessionListener {
 	
 	@Override
 	public void sessionDestroyed(HttpSessionEvent sessionEvent) {
-	
+		
+		//Reseter le DroidManager pour avoir la nouvelle liste de droid.
 		panier = new Panier();
 		checkoutForm = new CheckoutForm();
 		sessionEvent.getSession().setAttribute("panier", panier);

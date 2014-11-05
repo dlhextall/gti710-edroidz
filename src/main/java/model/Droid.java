@@ -21,6 +21,8 @@ public class Droid
 	private boolean canClean;
 	private boolean canWashDishes;
 	
+	private int reserve = 0;
+	
 	public Droid(int id, int quantityAvailable, double price, String name, 
 			String description, String imageName, ArrayList<Comment> commentsList, String promoImgName,
 			boolean canCombat, boolean canCook, boolean canGarden, 
@@ -50,7 +52,7 @@ public class Droid
 	}
 
 	public int getQuantityAvailable() {
-		return quantityAvailable;
+		return quantityAvailable - reserve;
 	}
 
 	public double getPrice() {
@@ -99,5 +101,23 @@ public class Droid
 
 	public boolean isCanWashDishes() {
 		return canWashDishes;
+	}
+
+	public void addReserve(int number) {
+		this.reserve += number;
+	}
+	
+	public int getAverageScore()
+	{		
+		double total = 0;
+		
+		for (int i = 0; i < commentsList.size(); i++) {
+			total += commentsList.get(i).getScore();
+		}
+		
+		if(total == 0)
+			return 0;
+		
+		return (int) Math.ceil(total/commentsList.size());
 	}
 }

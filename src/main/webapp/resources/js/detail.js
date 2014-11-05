@@ -13,11 +13,13 @@ $(document).ready(function() {
 		
 	$('#form_btn').click(function() {	
 
-				var body = $("html, body");
+				/*var body = $("html, body");
 				body.animate({scrollTop:0}, '500', 'swing').promise().done(function(){
 					$('#panier').html('+1');		
 					ajaxForm();
-				});	
+				});	*/
+		
+				ajaxForm();
 	});	
 	
 	function ajaxForm() {
@@ -27,9 +29,20 @@ $(document).ready(function() {
 		$montant = toDouble($("#totalPrice").val());
 		$('#totalPrice').attr('value', $montant);
 		
+		//var body = $("html, body");
+		//var pos = document.documentElement.scrollTop;
+		
 		$.get( "../panier/add", { nbDroids: $nbDroids, idDroid: idDroid } )
 		  .done(function( data ) {
-		    
+
+			  window.location.href = "http://localhost:8080/edroidz/panier";
+			  //window.location.href = "http://localhost:8080/edroidz/detail/" + $("#idDroid").val();
+			  //Problème ic, la page ne se reload pas assez vite pour que le reste du code s'éxécute
+			  //$('#panier').html('+1');
+			  //document.documentElement.scrollTop = pos;	
+			  //body.animate({scrollTop:0}, '500', 'swing').promise().done(function(){		
+		
+			  //});				  
 		});
 	}
 	

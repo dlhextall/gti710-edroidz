@@ -33,10 +33,11 @@ public class LignePanier {
 	}
 
 	public void updateNbDroid(int _nbDroid) {
-		if(_nbDroid <= droid.getQuantityAvailable())
+		int dif = _nbDroid - nbDroids;
+		if(dif <= droid.getQuantityAvailable())
+		{
 			this.nbDroids = _nbDroid;
-		
-		System.out.println(droid.getQuantityAvailable());
-		System.out.println(nbDroids);
+			droid.addReserve(dif);
+		}
 	}
 }

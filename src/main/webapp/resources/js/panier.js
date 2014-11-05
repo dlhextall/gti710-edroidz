@@ -5,8 +5,11 @@ function update(id, val)
     	//alert(id);
         //alert(val);
         
-        window.location.href = "panier/update/" + id + "/" + val;
+    	window.location.href = "http://localhost:8080/edroidz/panier/update/" + id + "/" + val;
     }
     else
-        alert("Le nombre est invalide.")
+    {
+        alert("Le nombre est invalide.");
+        window.location.href = "http://localhost:8080/edroidz/panier";
+    }
 }

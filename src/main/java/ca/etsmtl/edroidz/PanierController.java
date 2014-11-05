@@ -40,15 +40,7 @@ public class PanierController {
 		
 		if (panier == null) 
 			panier = new Panier();
-		
-		
-		//---------- TO DELETE AFTER TEST -----------
-		Droid droid = new Droid(49, 3, 4999.99, "Seyfried Model", "", "49", null, "img1",
-				//combat, cook, garden, laundry, clean , dishes
-				true, true, true, true, true, true);
-		panier.addLignePanier(droid, 1);
-		//---------- STOP -----------
-		
+				
 		session.setAttribute("panier", panier);
 		
 		return "panier";

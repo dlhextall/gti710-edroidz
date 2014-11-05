@@ -20,7 +20,7 @@
     	<!-- Header -->
         <%@ include file="templates/header.jsp" %>
         
-       <div class='container'>
+        <div class='container'>
         <div class="row show-preview">
             <div>
                 <div class="col-md-3">
@@ -114,12 +114,15 @@
                    	</div>
                 </div>
                 <div class='col-md-5' >
-                	<h2>Description</h2>		               
-		                <div class="col-md-12" style="padding-left: 0px;">		                	
-		                    <div class="list-group list-group-item">
-		                    	<p class="list-group-item-text">${ droid.description }</p>
-		                    </div>
-		                </div>                
+                	<h2>Description</h2>	
+                	<h7>Moyenne des appréciations</h7>
+		            	<!-- L'attribut disabled est utiliser dans le javascript, ne pas y toucher! -->
+		                <div class="starrr2 rating3" data-rating='${ droid.getAverageScore() }' disabled="true"></div>     
+		            <div class="col-md-12" style="padding-left: 0px;">		                	
+		            	<div class="list-group list-group-item">
+		                	<p class="list-group-item-text">${ droid.description }</p>
+		            	</div>
+		            </div>
                 </div>
                 
                 <div class="col-md-4 decalage">
@@ -129,18 +132,35 @@
         </div>
         
 
-        <!-- Ticket option -->
+        <!-- Achat -->
         <div class="row show-buying">
             <div class=" form-horizontal">
                 <h2>Achat</h2>
                 <div class="form-group">
+                	<label for="nbDispo" class="col-sm-4 control-label">Nombre disponible</label>
+                    <div class="col-sm-6">
+                        <input name="nbDispo" id='nbDispo' type="text" class="form-control" value="${ droid.quantityAvailable }" readonly>
+                    </div>
+                </div>
+                <div class="form-group">
                     <label for="nbDroids" class="col-sm-4 control-label">Nombre d'androïde</label>
                     <div class="col-sm-6">
                         <select name="nbDroids" id="nbDroids" class="form-control">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
+                        	<c:if test="${ droid.quantityAvailable == 0 }">
+									<option value="0">Aucun en stock</option>
+							</c:if>
+                        	<c:if test="${ droid.quantityAvailable >= 1 }">
+									<option value="1">1</option>
+							</c:if>
+							<c:if test="${ droid.quantityAvailable >= 2 }">
+									<option value="2">2</option>
+							</c:if>
+							<c:if test="${ droid.quantityAvailable >= 3 }">
+									<option value="3">3</option>
+							</c:if>
+							<c:if test="${ droid.quantityAvailable >= 4 }">
+									<option value="4">4</option>
+							</c:if>
                         </select>
                     </div>
                 </div>	                   
@@ -154,7 +174,14 @@
                 </div>
                 
                 <div class="col-md-10 text-right">
-                    <button type="submit" id='form_btn' class="btn btn-default">Ajouter au panier</button>                       
+                	<c:choose>
+						<c:when test="${ droid.quantityAvailable == 0 }">
+							<button type="submit" id='form_btn' class="btn btn-default" disabled>Ajouter au panier</button> 
+						</c:when>
+						<c:otherwise>
+							<button type="submit" id='form_btn' class="btn btn-default">Ajouter au panier</button> 
+						</c:otherwise>
+					</c:choose>
                 </div>                
             </div>
         </div>
@@ -182,7 +209,9 @@
                 </div>
             </div>
         </div>
-                
+         
+        <!-- BUG le nombre de commentaire dans la lsite est bon, mais il n'affiche que les nouveaux??? -->
+        <!--<div class='row'>${ droid.commentsList.size() }</div>-->
         
         <div class='row'>
         	<c:forEach items="${ droid.commentsList }" var="curComment" varStatus="loop">

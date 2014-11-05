@@ -25,9 +25,11 @@ public class Panier{
 	public void addLignePanier(Droid droid, int nbDroids) {
 		LignePanier ligne = new LignePanier(droid, nbDroids);
 		listLignePanier.add(ligne);
+		droid.addReserve(nbDroids);
 	}
 	
 	public void removeLignePanier(int indexLigne) {
+		listLignePanier.get(indexLigne).getDroid().addReserve(-listLignePanier.get(indexLigne).getNbDroids());
 		listLignePanier.remove(indexLigne);
 	}
 

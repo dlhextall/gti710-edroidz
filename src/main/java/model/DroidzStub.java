@@ -37,7 +37,7 @@ public class DroidzStub
 		commentList = new ArrayList<Comment>();
 		commentList.add(comment5);
 		description = "Description à venir.";
-		droid = new Droid(39, 100, 4999.99, "Kia Pub", description, "39", commentList, "img2",
+		droid = new Droid(39, 1, 4999.99, "Kia Pub", description, "39", commentList, "img2",
 				//combat, cook, garden, laundry, clean , dishes
 				false, true, true, true, true, true);
 		droidList.add(droid);
@@ -47,7 +47,7 @@ public class DroidzStub
 		commentList = new ArrayList<Comment>();
 		commentList.add(comment2);
 		description = "Description à venir.";
-		droid = new Droid(56, 100, 4999.99, "Sara Android", description, "56", commentList, null,
+		droid = new Droid(56, 2, 4999.99, "Sara Android", description, "56", commentList, null,
 				//combat, cook, garden, laundry, clean , dishes
 				false, true, true, true, true, true);
 		droidList.add(droid);
@@ -56,7 +56,7 @@ public class DroidzStub
 		commentList = new ArrayList<Comment>();
 		commentList.add(comment2);
 		description = "Description à venir.";
-		droid = new Droid(47, 100, 4999.99, "Yellow Fiora", description, "47", commentList, null,
+		droid = new Droid(47, 4, 4999.99, "Yellow Fiora", description, "47", commentList, null,
 				//combat, cook, garden, laundry, clean , dishes
 				true, true, true, true, true, false);
 		droidList.add(droid);
@@ -65,7 +65,7 @@ public class DroidzStub
 		commentList = new ArrayList<Comment>();
 		commentList.add(comment5);
 		description = "Description à venir.";
-		droid = new Droid(40, 100, 4999.99, "Sherly Robot", description, "40", commentList, null,
+		droid = new Droid(40, 0, 4999.99, "Sherly Robot", description, "40", commentList, null,
 				//combat, cook, garden, laundry, clean , dishes
 				false, false, true, true, false, false);
 		droidList.add(droid);
