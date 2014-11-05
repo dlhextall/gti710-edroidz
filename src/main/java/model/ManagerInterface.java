@@ -6,6 +6,8 @@ public interface ManagerInterface {
 	
 	public ArrayList<Droid> getDroidList();
 	
+	public ArrayList<Droid> getDroidListAt(String filtre);
+	
 	public ArrayList<Droid> getPromoList();
 
 	public Droid getDroid(int droidId);

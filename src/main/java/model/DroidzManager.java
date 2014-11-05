@@ -18,6 +18,11 @@ public class DroidzManager implements ManagerInterface
 		}
 		return instance;
 	}
+	
+	public ArrayList<Droid> getDroidListAt(String filtre){
+		return droidList;
+		
+	}
 
 	public ArrayList<Droid> getDroidList() {
 		return droidList;

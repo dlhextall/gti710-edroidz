@@ -21,19 +21,19 @@
 				</div>
 				<ul class="navbar-menu animate">
 					<li>
-						<a href="#about-us" class="animate">
+						<a href="/edroidz/catalogue/combat" class="animate">
 							<span class="desc animate"> DANNY </span>
 							<span class="glyphicon glyphicon-user"></span>
 						</a>
 					</li>
 					<li>
-						<a href="#blog" class="animate">
+						<a href="/edroidz/catalogue/cook" class="animate">
 							<span class="desc animate"> GO PLAY </span>
 							<span class="glyphicon glyphicon-info-sign"></span>
 						</a>
 					</li>
 					<li>
-						<a href="#contact-us" class="animate">
+						<a href="/edroidz/catalogue/garden" class="animate">
 							<span class="desc animate"> MASS EFFECT 3 </span>
 							<span class="glyphicon glyphicon-comment"></span>
 						</a>
