@@ -4,6 +4,46 @@
     background-repeat: no-repeat;
 
 }
+
+.imgcombat{
+	height: 40px;
+	background-image: url("../images/skills/combatOn.png");
+	background-repeat: no-repeat;
+}
+
+.imgcook{
+	height: 40px;
+	width: 40px;
+	background-image: url("../images/skills/combatOn.png");
+	background-repeat: no-repeat;
+}
+
+.imggarden{
+	height: 40px;
+	background-image: url("../images/skills/combatOn.png");
+	background-repeat: no-repeat;
+}
+
+.imglaundry{
+	height: 40px;
+	background-image: url("../images/skills/combatOn.png");
+	background-repeat: no-repeat;
+}
+
+.imgclean{
+	height: 40px;
+	background-image: url("../images/skills/combatOn.png");
+	background-repeat: no-repeat;
+}
+
+.imgdish{
+	height: 40px;
+	background-image: url("../images/skills/combatOn.png");
+	background-repeat: no-repeat;
+}
+
+
+
 .navbar {
     margin-bottom: 0;
 }

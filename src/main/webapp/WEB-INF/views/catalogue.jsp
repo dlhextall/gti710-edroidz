@@ -22,20 +22,38 @@
 				<ul class="navbar-menu animate">
 					<li>
 						<a href="/edroidz/catalogue/combat" class="animate">
-							<span class="desc animate"> DANNY </span>
-							<span class="glyphicon glyphicon-user"></span>
+							<span class="desc animate"> Combat </span>
+							<span class="imgcombat"></span>
 						</a>
 					</li>
 					<li>
 						<a href="/edroidz/catalogue/cook" class="animate">
-							<span class="desc animate"> GO PLAY </span>
-							<span class="glyphicon glyphicon-info-sign"></span>
+							<span class="desc animate"> Cuisine </span>
+							<span class="imgcook"></span>
 						</a>
 					</li>
 					<li>
 						<a href="/edroidz/catalogue/garden" class="animate">
-							<span class="desc animate"> MASS EFFECT 3 </span>
-							<span class="glyphicon glyphicon-comment"></span>
+							<span class="desc animate"> Jardinage </span>
+							<span class="imggarden"></span>
+						</a>
+					</li>
+					<li>
+						<a href="/edroidz/catalogue/laundry" class="animate">
+							<span class="desc animate"> Lessive </span>
+							<span class="imglaundry"></span>
+						</a>
+					</li>
+					<li>
+						<a href="/edroidz/catalogue/clean" class="animate">
+							<span class="desc animate"> Ménage </span>
+							<span class="imgclean"></span>
+						</a>
+					</li>
+					<li>
+						<a href="/edroidz/catalogue/dish" class="animate">
+							<span class="desc animate"> Vaiselle </span>
+							<span class="imgdish"></span>
 						</a>
 					</li>
 				</ul>
