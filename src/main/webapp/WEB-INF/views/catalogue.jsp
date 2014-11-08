@@ -23,37 +23,49 @@
 					<li>
 						<a href="/edroidz/catalogue/combat" class="animate">
 							<span class="desc animate"> Combat </span>
-							<span class="imgcombat"></span>
+							<span class="bg_imgage"> 
+								<img src="<c:url value="/resources/images/skills/combatOn.png" />" />
+							</span>
 						</a>
 					</li>
 					<li>
 						<a href="/edroidz/catalogue/cook" class="animate">
 							<span class="desc animate"> Cuisine </span>
-							<span class="imgcook"></span>
+							<span class="bg_imgage">
+								<img src="<c:url value="/resources/images/skills/cookOn.png" />" />
+							</span>
 						</a>
 					</li>
 					<li>
 						<a href="/edroidz/catalogue/garden" class="animate">
 							<span class="desc animate"> Jardinage </span>
-							<span class="imggarden"></span>
+							<span class="bg_imgage">
+								<img src="<c:url value="/resources/images/skills/gardenOn.png" />" />
+							</span>
 						</a>
 					</li>
 					<li>
 						<a href="/edroidz/catalogue/laundry" class="animate">
 							<span class="desc animate"> Lessive </span>
-							<span class="imglaundry"></span>
+							<span class="bg_imgage">
+								<img src="<c:url value="/resources/images/skills/laundryOn.png" />" />
+							</span>
 						</a>
 					</li>
 					<li>
 						<a href="/edroidz/catalogue/clean" class="animate">
 							<span class="desc animate"> Ménage </span>
-							<span class="imgclean"></span>
+							<span class="bg_imgage">
+								<img src="<c:url value="/resources/images/skills/cleaningOn.png" />" />
+							</span>
 						</a>
 					</li>
 					<li>
 						<a href="/edroidz/catalogue/dish" class="animate">
 							<span class="desc animate"> Vaiselle </span>
-							<span class="imgdish"></span>
+							<span class="bg_imgage">
+								<img src="<c:url value="/resources/images/skills/washdishesOn.png" />" />
+							</span>
 						</a>
 					</li>
 				</ul>

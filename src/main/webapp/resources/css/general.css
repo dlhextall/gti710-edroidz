@@ -5,43 +5,23 @@
 
 }
 
-.imgcombat{
-	height: 40px;
-	background-image: url("../images/skills/combatOn.png");
-	background-repeat: no-repeat;
+.bg_imgage{
+	position: relative;
+	top: 1px;
+	left:5px;
+	display: inline-block;
+	font-family: 'Glyphicons Halflings';
+	font-style: normal;
+	font-weight: 400;
+	
+	-webkit-font-smoothing: antialiased;
 }
 
-.imgcook{
-	height: 40px;
-	width: 40px;
-	background-image: url("../images/skills/combatOn.png");
-	background-repeat: no-repeat;
-}
+.navbar-minimal > .navbar-menu > li > a {
 
-.imggarden{
-	height: 40px;
-	background-image: url("../images/skills/combatOn.png");
-	background-repeat: no-repeat;
-}
+padding: 10px 0px !important;
 
-.imglaundry{
-	height: 40px;
-	background-image: url("../images/skills/combatOn.png");
-	background-repeat: no-repeat;
 }
-
-.imgclean{
-	height: 40px;
-	background-image: url("../images/skills/combatOn.png");
-	background-repeat: no-repeat;
-}
-
-.imgdish{
-	height: 40px;
-	background-image: url("../images/skills/combatOn.png");
-	background-repeat: no-repeat;
-}
-
 
 
 .navbar {
