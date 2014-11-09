@@ -7,11 +7,11 @@
 
 
 .navbar-default .navbar-brand {
-	color:black !important;
+	color:white !important;
 }
 
 .navbar-default .navbar-nav>li>a {
-	color:black !important;
+	color:white !important;
 }
 
 .bg_imgage{
@@ -38,13 +38,13 @@ padding: 10px 0px !important;
     font-weight:bold;
 }
 .navbar-default {
-	background-color: #009070;
+	background-color: #5a5a5a;
 }
 
 
 
 .footer {
-    background-color: #776E66;
+    background-color: #202122;
     position:fixed;	  
     bottom: 0px;
   	width: 100%;
