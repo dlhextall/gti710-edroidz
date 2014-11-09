@@ -226,11 +226,8 @@
                     </div>
                 </div>
             </div>
-             
-            <!-- BUG le nombre de commentaire dans la lsite est bon, mais il n'affiche que les nouveaux??? -->
-            <!--<div class='row'>${ droid.commentsList.size() }</div>-->
             
-            <div class='row'>
+            <div class='row espace'>
                 <c:forEach items="${ droid.commentsList }" var="curComment" varStatus="loop">
                     <div class="oldCommentContainer">
                         <p class="oldComment">${ curComment.comment }</p>
