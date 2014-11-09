@@ -21,6 +21,14 @@
 				</div>
 				<ul class="navbar-menu animate">
 					<li>
+						<a href="/edroidz/catalogue/" class="animate">
+							<span class="desc animate"> Tout le catalogue </span>
+							<span class="bg_imgage"> 
+								<img src="<c:url value="/resources/images/skills/star.png" />" />
+							</span>
+						</a>
+					</li>
+					<li>
 						<a href="/edroidz/catalogue/combat" class="animate">
 							<span class="desc animate"> Combat </span>
 							<span class="bg_imgage"> 
