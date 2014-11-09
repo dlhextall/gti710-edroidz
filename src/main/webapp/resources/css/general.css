@@ -5,6 +5,15 @@
 
 }
 
+
+.navbar-default .navbar-brand {
+	color:black !important;
+}
+
+.navbar-default .navbar-nav>li>a {
+	color:black !important;
+}
+
 .bg_imgage{
 	position: relative;
 	top: 1px;
@@ -26,19 +35,25 @@ padding: 10px 0px !important;
 
 .navbar {
     margin-bottom: 0;
+    font-weight:bold;
 }
 .navbar-default {
-	background-color: #918E8B;
+	background-color: #009070;
 }
 
 
 
 .footer {
-    background-color: #363737;
+    background-color: #776E66;
     position:fixed;	  
     bottom: 0px;
   	width: 100%;
   	height: 60px;
+  	
+}
+
+.container .text-muted {
+	color:#EFF0F2;
 }
 
 .twitter-typeahead .tt-query,
