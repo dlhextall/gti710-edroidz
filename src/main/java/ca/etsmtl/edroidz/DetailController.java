@@ -1,5 +1,6 @@
 package ca.etsmtl.edroidz;
 
+import java.util.ArrayList;
 import java.util.Locale;
 
 import javax.servlet.http.HttpServletRequest;
@@ -22,6 +23,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import amazone.Amazones;
+import amazone.ItemLookupSample;
+
 @Controller
 public class DetailController {
 	
@@ -33,6 +37,8 @@ public class DetailController {
 	@RequestMapping(value = "/detail/{id}", method = RequestMethod.GET)
 	public ModelAndView detail(@PathVariable("id") int _droidId, HttpServletRequest _req) {
 		
+		ArrayList<Amazones> matches = ItemLookupSample.main();
+		
 		Droid droid = DroidzManager.getInstance().getDroid(_droidId);
 		
 		if (droid == null)
@@ -40,7 +46,10 @@ public class DetailController {
 		
 		ModelAndView model = new ModelAndView("detail");
 		model.addObject("droid", droid );
+		model.addObject("matches", matches);
 		model.addObject("commentForm", new CommentForm());
+		
+		
 				
 		return model;
 	}
