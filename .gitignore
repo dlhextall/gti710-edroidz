@@ -102,3 +102,6 @@ com_crashlytics_export_strings.xml
 
 
 /target/
+src/main/java/amazone/Amazones.java
+src/main/java/amazone/ItemLookupSample.java
+src/main/java/amazone/SignedRequestsHelper.java
