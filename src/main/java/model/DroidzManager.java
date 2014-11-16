@@ -2,6 +2,8 @@ package model;
 
 import java.util.ArrayList;
 
+import services.ServiceDroidList;
+
 public class DroidzManager implements ManagerInterface
 {	
 	private static DroidzManager instance;
@@ -25,6 +27,8 @@ public class DroidzManager implements ManagerInterface
 	}
 
 	public ArrayList<Droid> getDroidList() {
+		ServiceDroidList service = new ServiceDroidList();
+		
 		return droidList;
 	}
 	
