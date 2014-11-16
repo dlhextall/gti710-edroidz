@@ -144,56 +144,51 @@
            
             <div class="row show-buying">
              <hr>
-            	 <!--Amazone-->
+            	  <!--Amazone-->
             	<div class="col-md-4 thumbnail">
             		<div class="amazone">            
 	                    <h2>Produits Connexe</h2>	                    
 	                    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 						  <!-- Indicators -->
 						  <ol class="carousel-indicators">
-						    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-						    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-						    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-						    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
-						    <li data-target="#carousel-example-generic" data-slide-to="4"></li>
-						    <li data-target="#carousel-example-generic" data-slide-to="5"></li>
+							  <c:set var="count" value="0" scope="page" />
+							  	<c:forEach items="${ matches }" var="matche" varStatus="loop">
+							  	
+							  		<c:choose>
+	                                    <c:when test="${ count< 1 }">
+	                                        <li data-target="#carousel-example-generic" data-slide-to="${ count }" class="active"></li>
+	                                    </c:when>
+	                                    <c:otherwise>
+	                                         <li data-target="#carousel-example-generic" data-slide-to="${ count }"></li>
+	                                    </c:otherwise>
+	                                </c:choose>                                								
+								      
+								    <c:set var="count" value="${count + 1}" scope="page"/>
+								</c:forEach>						    
+						    
 						  </ol>
 						
 						  <!-- Wrapper for slides -->
 						  <div class="carousel-inner" role="listbox">
-						    <div class="item active">
-						      <img src="${  matches.get(0).getImageName() }" width='331px'>
-						      <div class="carousel-caption">						       
-						        	<h2>${  matches.get(0).getTitle() }<h2>
-						      </div>
-						    </div>
-						    <div class="item">
-						      <img src="${  matches.get(2).getImageName() }" width='331px'>
-						      <div class="carousel-caption">
-						       	<h2>${  matches.get(2).getTitle() }<h2>
-						      </div>
-						    </div>
-						    
-						    <div class="item">
-						      <img src="${  matches.get(3).getImageName() }" width='331px'>
-						      <div class="carousel-caption">
-						        <h2>${  matches.get(3).getTitle() }<h2>
-						      </div>
-						    </div>
-						    
-						    <div class="item">
-						      <img src="${  matches.get(4).getImageName() }" width='331px'>
-						      <div class="carousel-caption">
-						        <h2>${  matches.get(4).getTitle() }<h2>
-						      </div>
-						    </div>
-						    
-						    <div class="item">
-						      <img src="${  matches.get(5).getImageName() }" width='331px'>
-						      <div class="carousel-caption">
-						        <h2>${  matches.get(5).getTitle() }<h2>
-						      </div>
-						    </div>
+						  	<c:set var="count" value="0" scope="page" />
+						  	<c:forEach items="${ matches }" var="matche" varStatus="loop">
+						  	
+						  		<c:choose>
+                                    <c:when test="${ count< 1 }">
+                                        <div class="item active">
+                                    </c:when>
+                                    <c:otherwise>
+                                        <div class="item">
+                                    </c:otherwise>
+                                </c:choose>
+                                								
+							      <img src="${ matche.getImageName() }" width='331px'>
+							      <div class="carousel-caption">						       
+							        	<h2><a href="${ matche.getUrl() }">${ matche.getTitle() }</a><h2>
+							      </div>
+							    </div>
+							    <c:set var="count" value="${count + 1}" scope="page"/>
+							</c:forEach>						    
 						   
 						  </div>
 						
@@ -210,7 +205,7 @@
                 	</div> 
             	</div>
             	
-            	<!-- Achat -->
+            	 <!-- Achat -->
                 <div class="col-md-8 form-horizontal">
                     <h2>Achat</h2>
                     <div class="form-group">

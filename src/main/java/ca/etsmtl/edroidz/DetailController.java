@@ -37,9 +37,9 @@ public class DetailController {
 	@RequestMapping(value = "/detail/{id}", method = RequestMethod.GET)
 	public ModelAndView detail(@PathVariable("id") int _droidId, HttpServletRequest _req) {
 		
-		ArrayList<Amazones> matches = ItemLookupSample.main();
-		
 		Droid droid = DroidzManager.getInstance().getDroid(_droidId);
+		
+		ArrayList<Amazones> matches = ItemLookupSample.main();
 		
 		if (droid == null)
 			System.out.println("Le droid est introuvable.");
@@ -48,8 +48,6 @@ public class DetailController {
 		model.addObject("droid", droid );
 		model.addObject("matches", matches);
 		model.addObject("commentForm", new CommentForm());
-		
-		
 				
 		return model;
 	}
