@@ -147,7 +147,7 @@
             	  <!--Amazone-->
             	<div class="col-md-4 thumbnail">
             		<div class="amazone">            
-	                    <h2>Produits Connexe</h2>	                    
+	                    <h2>Produits Connexes</h2>	                    
 	                    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 						  <!-- Indicators -->
 						  <ol class="carousel-indicators">

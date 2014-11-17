@@ -16,12 +16,12 @@ public class DroidzStub
 		//Commentaires
 		ArrayList<Comment> commentList = new ArrayList<Comment>();
 		String commentaire =  "Bonne qualité. Après modification du servomoteur en rotation continu je m'aperçois qu'il est très compliqué de trouver la valeur pour les stopper. Dans mon cas je suis sur une valeur de 82°, mais on sens bien que malgré la stabilité, la volonté de repartir est bien présente.";
-		Comment comment1 = new Comment(0, commentaire, 4);
-		Comment comment2 = new Comment(1, "La batterie ne dure que 24 heures. Insatisfait.", 1);
-		Comment comment3 = new Comment(2, "Ce modèle cuisine merveilleusement bien! 5/5!", 5);
-		Comment comment4 = new Comment(3, "Elle cuisine comme ma belle-mère!", 2);
-		Comment comment5 = new Comment(4, "Très bien en général.", 4);
-		Comment comment6 = new Comment(5, "Pas mal pour un prototype.", 3);
+		Comment comment1 = new Comment(0, 0, commentaire, 4);
+		Comment comment2 = new Comment(1, 0, "La batterie ne dure que 24 heures. Insatisfait.", 1);
+		Comment comment3 = new Comment(2, 0, "Ce modèle cuisine merveilleusement bien! 5/5!", 5);
+		Comment comment4 = new Comment(3, 0, "Elle cuisine comme ma belle-mère!", 2);
+		Comment comment5 = new Comment(4, 0, "Très bien en général.", 4);
+		Comment comment6 = new Comment(5, 0, "Pas mal pour un prototype.", 3);
 		
 		//Droid 49
 		commentList = new ArrayList<Comment>();

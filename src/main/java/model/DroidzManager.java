@@ -2,6 +2,7 @@ package model;
 
 import java.util.ArrayList;
 
+import services.ServiceDroid;
 import services.ServiceDroidList;
 
 public class DroidzManager implements ManagerInterface
@@ -22,22 +23,24 @@ public class DroidzManager implements ManagerInterface
 	}
 	
 	public ArrayList<Droid> getDroidListAt(String filtre){
-		return droidList;
-		
+		//return new ServiceDroidList().getDroidListFiltre(filtre);
+		return droidList;		
 	}
 
 	public ArrayList<Droid> getDroidList() {
-		ServiceDroidList service = new ServiceDroidList();
-		
+		//return new ServiceDroidList().getService();
 		return droidList;
 	}
 	
 	public ArrayList<Droid> getPromoList() {
+		//return new ServiceDroidList().getPromoList();
 		return promoList;
 	}
 
 	public Droid getDroid(int droidId)
 	{
+		//return new ServiceDroid().getService(droidId);
+		
 		for (int i = 0; i < droidList.size(); i++)
 		{
 			if (droidList.get(i).getId() == droidId)
@@ -54,7 +57,7 @@ public class DroidzManager implements ManagerInterface
 		//Comment id vraiment necessaire?
 		int commentId = 0;
 		Droid droid = getDroid(droidId);
-		Comment comment = new Comment(commentId, description, score);
+		Comment comment = new Comment(commentId, droidId, description, score);
 		droid.addComment(comment);
 	}
 
