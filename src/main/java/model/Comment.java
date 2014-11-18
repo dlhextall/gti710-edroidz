@@ -29,4 +29,8 @@ public class Comment
 	public int getProductId() {
 		return productId;
 	}
+	
+	public void setProductId(int newProductId) {
+		productId = newProductId;
+	}
 }

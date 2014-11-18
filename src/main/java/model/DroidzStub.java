@@ -11,7 +11,12 @@ public class DroidzStub
 		//Liste de droids
 		ArrayList<Droid> droidList = new ArrayList<Droid>();
 		Droid droid;
-		String description;
+		String description = "Prototype B96 est un robot polyvalent de 6e génération. "
+				+ "Son bras manipulateur possède une structure série à six liaisons rotoïdes "
+				+ "repérées de J1 à J6 de la base vers le poignet. Les mouvements sont réalisés grâce à six servomoteurs "
+				+ "électriques à courant alternatif de type « sans-balais ». "
+				+ "Chacun des axes est équipé d’un codeur absolu sur un tour permettant de repérer sa position angulaire "
+				+ "par rapport à la configuration d’origine.";
 				
 		//Commentaires
 		ArrayList<Comment> commentList = new ArrayList<Comment>();
@@ -26,7 +31,6 @@ public class DroidzStub
 		//Droid 49
 		commentList = new ArrayList<Comment>();
 		commentList.add(comment3);
-		description = "Description à venir.";
 		droid = new Droid(49, 3, 4999.99, "Seyfried Model", description, "49", commentList, "img1",
 				//combat, cook, garden, laundry, clean , dishes
 				true, true, true, true, true, true);
@@ -36,7 +40,6 @@ public class DroidzStub
 		//Droid 39
 		commentList = new ArrayList<Comment>();
 		commentList.add(comment5);
-		description = "Description à venir.";
 		droid = new Droid(39, 1, 4999.99, "Kia Pub", description, "39", commentList, "img2",
 				//combat, cook, garden, laundry, clean , dishes
 				false, true, true, true, true, true);
@@ -46,7 +49,6 @@ public class DroidzStub
 		//Droid 56
 		commentList = new ArrayList<Comment>();
 		commentList.add(comment2);
-		description = "Description à venir.";
 		droid = new Droid(56, 2, 4999.99, "Sara Android", description, "56", commentList, null,
 				//combat, cook, garden, laundry, clean , dishes
 				false, true, true, true, true, true);
@@ -55,7 +57,6 @@ public class DroidzStub
 		//Droid 47
 		commentList = new ArrayList<Comment>();
 		commentList.add(comment2);
-		description = "Description à venir.";
 		droid = new Droid(47, 4, 4999.99, "Yellow Fiora", description, "47", commentList, null,
 				//combat, cook, garden, laundry, clean , dishes
 				true, true, true, true, true, false);
@@ -64,8 +65,7 @@ public class DroidzStub
 		//Droid 40
 		commentList = new ArrayList<Comment>();
 		commentList.add(comment5);
-		description = "Description à venir.";
-		droid = new Droid(40, 0, 4999.99, "Sherly Robot", description, "40", commentList, null,
+		droid = new Droid(40, 0, 4999.99, "Sherly Robot", "Description à venir.", "40", commentList, null,
 				//combat, cook, garden, laundry, clean , dishes
 				false, false, true, true, false, false);
 		droidList.add(droid);
@@ -73,7 +73,6 @@ public class DroidzStub
 		//Droid 36
 		commentList = new ArrayList<Comment>();
 		commentList.add(comment3);
-		description = "Description à venir.";
 		droid = new Droid(36, 100, 4999.99, "Sun Tech", description, "36", commentList, null,
 				//combat, cook, garden, laundry, clean , dishes
 				false, true, true, true, true, true);
@@ -82,7 +81,6 @@ public class DroidzStub
 		//Droid 48
 		commentList = new ArrayList<Comment>();
 		commentList.add(comment2);
-		description = "Description à venir.";
 		droid = new Droid(48, 100, 4999.99, "White Fiora", description, "48", commentList, null,
 				//combat, cook, garden, laundry, clean , dishes
 				true, true, true, true, true, false);
@@ -91,7 +89,6 @@ public class DroidzStub
 		//Droid 50
 		commentList = new ArrayList<Comment>();
 		commentList.add(comment4);
-		description = "Description à venir.";
 		droid = new Droid(50, 100, 4999.99, "Teal Fiora", description, "50", commentList, null,
 				//combat, cook, garden, laundry, clean , dishes
 				true, true, true, true, true, false);
@@ -100,7 +97,6 @@ public class DroidzStub
 		//Droid 51
 		commentList = new ArrayList<Comment>();
 		commentList.add(comment4);
-		description = "Description à venir.";
 		droid = new Droid(51, 100, 4999.99, "Pink Fiora", description, "51", commentList, null,
 				//combat, cook, garden, laundry, clean , dishes
 				true, true, true, true, true, false);
@@ -109,7 +105,6 @@ public class DroidzStub
 		//Droid 52
 		commentList = new ArrayList<Comment>();
 		commentList.add(comment5);
-		description = "Description à venir.";
 		droid = new Droid(52, 100, 4999.99, "Generation Mia-Z4", description, "52", commentList, null,
 				//combat, cook, garden, laundry, clean , dishes
 				false, true, true, true, true, true);
@@ -118,7 +113,6 @@ public class DroidzStub
 		//Droid 53
 		commentList = new ArrayList<Comment>();
 		commentList.add(comment5);
-		description = "Description à venir.";
 		droid = new Droid(53, 100, 4999.99, "ZS-D-243 Techno", description, "53", commentList, null,
 				//combat, cook, garden, laundry, clean , dishes
 				true, true, true, true, true, true);
@@ -127,7 +121,6 @@ public class DroidzStub
 		//Droid 12
 		commentList = new ArrayList<Comment>();
 		commentList.add(comment1);
-		description = "Description à venir.";
 		droid = new Droid(12, 100, 4999.99, "Raw Science", description, "12", commentList, null,
 				//combat, cook, garden, laundry, clean , dishes
 				false, true, true, true, true, true);
@@ -135,7 +128,6 @@ public class DroidzStub
 		
 		//Droid 15
 		commentList = new ArrayList<Comment>();
-		description = "Description à venir.";
 		droid = new Droid(15, 100, 4999.99, "Rose", description, "15", commentList, null,
 				//combat, cook, garden, laundry, clean , dishes
 				false, true, true, true, true, true);
@@ -144,7 +136,6 @@ public class DroidzStub
 		//Droid 22	
 		commentList = new ArrayList<Comment>();
 		commentList.add(comment6);
-		description = "Description à venir.";
 		droid = new Droid(22, 100, 4999.99, "Knight S2", description, "22", commentList, null,
 				//combat, cook, garden, laundry, clean , dishes
 				true, true, true, true, true, true);
@@ -153,7 +144,6 @@ public class DroidzStub
 		//Droid 23	
 		commentList = new ArrayList<Comment>();
 		commentList.add(comment1);
-		description = "Description à venir.";
 		droid = new Droid(23, 100, 4999.99, "H-2036", description, "23", commentList, null,
 				//combat, cook, garden, laundry, clean , dishes
 				true, false, true, true, false, true);
@@ -162,7 +152,6 @@ public class DroidzStub
 		//Droid 16
 		commentList = new ArrayList<Comment>();
 		commentList.add(comment6);
-		description = "Description à venir.";
 		droid = new Droid(16, 100, 4999.99, "Jenkins XR56", description, "16", commentList, null,
 				//combat, cook, garden, laundry, clean , dishes
 				false, true, false, true, true, false);
@@ -171,7 +160,6 @@ public class DroidzStub
 		//Droid 54		
 		commentList = new ArrayList<Comment>();
 		commentList.add(comment3);
-		description = "Description à venir.";
 		droid = new Droid(54, 100, 4999.99, "Cuoco F150", description, "54", commentList, null,
 				//combat, cook, garden, laundry, clean , dishes
 				false, true, true, true, true, true);
@@ -180,7 +168,6 @@ public class DroidzStub
 		//Droid 18
 		commentList = new ArrayList<Comment>();
 		commentList.add(comment3);
-		description = "Description à venir.";
 		droid = new Droid(18, 100, 4999.99, "Red Mia", description, "18", commentList, null,
 				//combat, cook, garden, laundry, clean , dishes
 				false, false, false, true, true, false);
@@ -189,7 +176,6 @@ public class DroidzStub
 		//Droid 19		
 		commentList = new ArrayList<Comment>();
 		commentList.add(comment4);
-		description = "Description à venir.";
 		droid = new Droid(19, 100, 4999.99, "Modèle Soph", description, "19", commentList, null,
 				//combat, cook, garden, laundry, clean , dishes
 				false, true, true, true, true, true);
@@ -198,7 +184,6 @@ public class DroidzStub
 		//Droid 20	
 		commentList = new ArrayList<Comment>();
 		commentList.add(comment5);
-		description = "Description à venir.";
 		droid = new Droid(20, 100, 4999.99, "F2BR3", description, "20", commentList, null,
 				//combat, cook, garden, laundry, clean , dishes
 				true, true, true, true, true, false);
@@ -207,7 +192,6 @@ public class DroidzStub
 		//Droid 21	
 		commentList = new ArrayList<Comment>();
 		commentList.add(comment5);
-		description = "Description à venir.";
 		droid = new Droid(21, 100, 4999.99, "X-TREM", description, "21", commentList, null,
 				//combat, cook, garden, laundry, clean , dishes
 				true, true, true, true, false, false);
@@ -216,7 +200,6 @@ public class DroidzStub
 		//Droid 26	
 		commentList = new ArrayList<Comment>();
 		commentList.add(comment2);
-		description = "Description à venir.";
 		droid = new Droid(26, 100, 4999.99, "RedEye-Sirena", description, "26", commentList, null,
 				//combat, cook, garden, laundry, clean , dishes
 				false, true, true, true, true, true);
@@ -225,7 +208,6 @@ public class DroidzStub
 		//Droid 27	
 		commentList = new ArrayList<Comment>();
 		commentList.add(comment3);
-		description = "Description à venir.";
 		droid = new Droid(27, 100, 4999.99, "Hey-Bi**h", description, "27", commentList, null,
 				//combat, cook, garden, laundry, clean , dishes
 				true, false, false, false, false, false);
@@ -234,7 +216,6 @@ public class DroidzStub
 		//Droid 28	
 		commentList = new ArrayList<Comment>();
 		commentList.add(comment4);
-		description = "Description à venir.";
 		droid = new Droid(28, 100, 4999.99, "Combat-Jolie", description, "28", commentList, null,
 				//combat, cook, garden, laundry, clean , dishes
 				true, false, false, false, false, false);
@@ -243,7 +224,6 @@ public class DroidzStub
 		//Droid 29
 		commentList = new ArrayList<Comment>();
 		commentList.add(comment5);
-		description = "Description à venir.";
 		droid = new Droid(29, 100, 4999.99, "R88 Generation", description, "29", commentList, null,
 				//combat, cook, garden, laundry, clean , dishes
 				false, true, true, true, false, true);
@@ -252,7 +232,6 @@ public class DroidzStub
 		//Droid 30
 		commentList = new ArrayList<Comment>();
 		commentList.add(comment6);
-		description = "Description à venir.";
 		droid = new Droid(30, 100, 4999.99, "Multifonction Jannah", description, "30", commentList, null,
 				//combat, cook, garden, laundry, clean , dishes
 				true, true, true, true, true, true);
@@ -261,7 +240,6 @@ public class DroidzStub
 		//Droid 31
 		commentList = new ArrayList<Comment>();
 		commentList.add(comment1);
-		description = "Description à venir.";
 		droid = new Droid(31, 100, 4999.99, "Scary Ria-666", description, "31", commentList, null,
 				//combat, cook, garden, laundry, clean , dishes
 				true, false, false, false, false, false);
@@ -270,7 +248,6 @@ public class DroidzStub
 		//Droid 32
 		commentList = new ArrayList<Comment>();
 		commentList.add(comment1);
-		description = "Description à venir.";
 		droid = new Droid(32, 100, 4999.99, "Eve Version", description, "32", commentList, null,
 				//combat, cook, garden, laundry, clean , dishes
 				false, true, true, true, false, true);
@@ -279,7 +256,6 @@ public class DroidzStub
 		//Droid 38
 		commentList = new ArrayList<Comment>();
 		commentList.add(comment4);
-		description = "Description à venir.";
 		droid = new Droid(38, 100, 4999.99, "Last Tech Z34", description, "38", commentList, null,
 				//combat, cook, garden, laundry, clean , dishes
 				false, false, false, false, true, true);
@@ -288,7 +264,6 @@ public class DroidzStub
 		//Droid 41
 		commentList = new ArrayList<Comment>();
 		commentList.add(comment6);
-		description = "Description à venir.";
 		droid = new Droid(41, 100, 4999.99, "Mass-E3", description, "41", commentList, null,
 				//combat, cook, garden, laundry, clean , dishes
 				true, false, false, false, false, false);
@@ -297,7 +272,6 @@ public class DroidzStub
 		//Droid 42
 		commentList = new ArrayList<Comment>();
 		commentList.add(comment1);
-		description = "Description à venir.";
 		droid = new Droid(42, 100, 4999.99, "Prototype D-23L", description, "42", commentList, null,
 				//combat, cook, garden, laundry, clean , dishes
 				false, true, true, false, true, true);
@@ -306,7 +280,6 @@ public class DroidzStub
 		//Droid 45
 		commentList = new ArrayList<Comment>();
 		commentList.add(comment1);
-		description = "Description à venir.";
 		droid = new Droid(45, 100, 4999.99, "Rachel-V1-2020", description, "45", commentList, null,
 				//combat, cook, garden, laundry, clean , dishes
 				false, false, false, false, false, true);
@@ -315,7 +288,6 @@ public class DroidzStub
 		//Droid 46
 		commentList = new ArrayList<Comment>();
 		commentList.add(comment2);
-		description = "Description à venir.";
 		droid = new Droid(46, 100, 4999.99, "Blue Fiora", description, "46", commentList, null,
 				//combat, cook, garden, laundry, clean , dishes
 				true, true, true, true, true, false);
