@@ -70,7 +70,7 @@ public class DroidzManager implements ManagerInterface
 	@Override
 	public String pay(CheckoutForm checkoutForm, Panier panier) {
 		
-		//new ServiceAddPartner().addPartner(checkoutForm);		
+		new ServiceAddPartner().addPartner(checkoutForm);
 		//new ServiceAddPurchase().addPurchase(panier);
 		
 		//Ajouter le numero de confirmation dans la bd???

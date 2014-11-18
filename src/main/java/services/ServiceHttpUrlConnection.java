@@ -8,7 +8,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 import javax.net.ssl.HttpsURLConnection;
- 
+
 public class ServiceHttpUrlConnection {
  
 	private final String USER_AGENT = "Mozilla/5.0";
@@ -52,12 +52,14 @@ public class ServiceHttpUrlConnection {
 	}
  
 	// HTTP POST request
+	@SuppressWarnings("restriction")
 	public void sendPost(String url, String urlParameters) {
 		
 		try {
 			
-			URL obj = new URL(url);
-			HttpsURLConnection con = (HttpsURLConnection) obj.openConnection();
+			//URL obj = new URL(url);
+			java.net.URL obj = new URL(null, url,new sun.net.www.protocol.http.Handler());
+			HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 	 
 			//add request header
 			con.setRequestMethod("POST");
@@ -67,13 +69,13 @@ public class ServiceHttpUrlConnection {
 			// Send post request
 			con.setDoOutput(true);
 			DataOutputStream wr = new DataOutputStream(con.getOutputStream());
-			wr.writeBytes(urlParameters);
+			wr.writeBytes(urlParameters.replaceAll(" ", "%20"));
 			wr.flush();
 			wr.close();
 	 
 			int responseCode = con.getResponseCode();
 			System.out.println("\nSending 'POST' request to URL : " + url);
-			System.out.println("Post parameters : " + urlParameters);
+			System.out.println("Post parameters : " + urlParameters.replaceAll(" ", "%20"));
 			System.out.println("Response Code : " + responseCode);
 	 
 			BufferedReader in = new BufferedReader(

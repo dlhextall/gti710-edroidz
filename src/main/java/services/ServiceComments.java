@@ -11,16 +11,14 @@ import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
 public class ServiceComments {
-	
-	private ArrayList<Comment> allCommentList = new ArrayList<Comment>();
-	
-	public ServiceComments()
+
+	public ArrayList<Comment> getComments(int droidId)
 	{
 		ArrayList<Comment> commentList = new ArrayList<Comment>();
 		ServiceHttpUrlConnection http = new ServiceHttpUrlConnection();
 		JSONParser parser = new JSONParser();
 		
-		String url = "http://127.0.0.1:8000/comments/list/";
+		String url = "http://127.0.0.1:8000/products/get/" + droidId + "/comments/list/";
 		String response = http.sendGet(url);
 		
 		try {
@@ -46,19 +44,6 @@ public class ServiceComments {
 	        System.out.println("position: " + pe.getPosition());
 	        System.out.println(pe);
 	    }
-	}
-
-	public ArrayList<Comment> getComments(int droidId)
-	{
-		ArrayList<Comment> commentList = new ArrayList<Comment>();
-		
-		for (int i = 0; i < allCommentList.size(); i++)
-		{
-			Comment comment = allCommentList.get(i);
-			
-			if(comment.getProductId() == droidId)
-				commentList.add(comment);
-		}
 		
 		return commentList;
 	}

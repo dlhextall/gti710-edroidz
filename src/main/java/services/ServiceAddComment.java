@@ -6,11 +6,10 @@ public class ServiceAddComment {
 
 	public ServiceAddComment(Comment comment)
 	{
-		String urlParameters = "comment=" + comment.getComment()
-				+ "&score=" + comment.getScore()
-				+ "&productId="  + comment.getProductId();
+		String urlParameters = "comment_text=" + comment.getComment()
+				+ "&note=" + comment.getScore();
 		
-		String url = "http://127.0.0.1:8000/comments/add/";
+		String url = "http://127.0.0.1:8000/products/get/" + comment.getProductId() + "/comments/add";
 		ServiceHttpUrlConnection http = new ServiceHttpUrlConnection();		
 		http.sendPost(url, urlParameters);
 	}
