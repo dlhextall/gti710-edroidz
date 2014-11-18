@@ -9,7 +9,9 @@ $(document).ready(function() {
 		$traitement = (parseFloat($("#nbDroids").val())*$montant).toFixed(2);
 		$traitement = toFMT($traitement);		
 		$('#totalPrice').attr('value', $traitement);
-	});		
+	});
+	
+	
 		
 	$('#form_btn').click(function() {	
 
@@ -37,7 +39,7 @@ $(document).ready(function() {
 
 			  window.location.href = "http://localhost:8080/edroidz/panier";
 			  //window.location.href = "http://localhost:8080/edroidz/detail/" + $("#idDroid").val();
-			  //Problème ic, la page ne se reload pas assez vite pour que le reste du code s'éxécute
+			  //Problï¿½me ic, la page ne se reload pas assez vite pour que le reste du code s'ï¿½xï¿½cute
 			  //$('#panier').html('+1');
 			  //document.documentElement.scrollTop = pos;	
 			  //body.animate({scrollTop:0}, '500', 'swing').promise().done(function(){		
@@ -61,4 +63,19 @@ $(document).ready(function() {
 		str = str.replace(/\s/g, '');		
 		return str;
 	}
+	
+	$(document).on('click', '#commentbutton', function(data){    
+		var idDroid = $("#idDroid").val();		
+		localStorage.setItem(idDroid, "true");		   
+
+    });
+	
+	var idDroid = $("#idDroid").val();	
+	if(localStorage.getItem(idDroid)){
+		 $('#commentbutton').prop('disabled', true);
+		 $('#comment').prop('disabled', true);		
+	}
+	
+	
+	
 });

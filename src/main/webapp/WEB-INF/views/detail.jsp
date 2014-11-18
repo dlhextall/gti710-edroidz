@@ -273,7 +273,7 @@
                             <!-- L'attribut disabled est utiliser dans le javascript, ne pas y toucher! -->
                             <div id="stars-existing" class="starrr" data-rating='${ comment.score }' disabled="false"></div>
                             <div class=" text-right">
-                                <button type="submit" id='form_btn' class="btn btn-default">Envoyer</button>                       
+                                <button type="submit" id='commentbutton' class="btn btn-default">Envoyer</button>                       
                             </div>
                         </form:form>                
                     </div>
