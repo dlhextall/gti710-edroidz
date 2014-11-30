@@ -63,7 +63,7 @@ public class DroidzManager implements ManagerInterface
 		int commentId = 0;
 		Droid droid = getDroid(droidId);
 		Comment comment = new Comment(commentId, droidId, description, score);
-		//new ServiceAddComment(comment);
+		new ServiceAddComment(comment);
 		droid.addComment(comment);
 	}
 

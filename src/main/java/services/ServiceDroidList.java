@@ -3,6 +3,8 @@ package services;
 import java.awt.dnd.DragSourceAdapter;
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import model.Comment;
 import model.Droid;
@@ -32,7 +34,9 @@ public class ServiceDroidList {
 	        	
 	            JSONObject json = (JSONObject) it.next();
 	            
-	            if(Integer.parseInt(json.get("categ_id").toString()) == 19) //droid category = 19
+	    		String category = json.get("categ_id").toString().replaceAll("[^0-9]","");
+	            
+	            if(Integer.parseInt(category) == 19) //droid category = 19
 	            {
 	            	ArrayList<Comment> commentList = new ServiceComments().getComments(Integer.parseInt(json.get("id").toString()));
 	            	
@@ -53,6 +57,10 @@ public class ServiceDroidList {
 		            		Boolean.valueOf(json.get("wash_dishes").toString())); //washDishes
 		            
 		            droidList.add(droid);
+		            
+		            System.out.println(droid.getId());
+		            System.out.println(droid.getName());
+		            System.out.println(droid.getPrice());
 	            }
 	        }
 	        

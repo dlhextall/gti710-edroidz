@@ -23,34 +23,34 @@ public class ServiceDroid {
 		
 	    try {
 	    	Object obj = parser.parse(response);
-	        JSONArray array = (JSONArray)obj;
-	        
-	        Iterator it = array.iterator();	        
-	        while (it.hasNext()) {
-	        	
-	            JSONObject json = (JSONObject) it.next();
+	        JSONObject json = (JSONObject)obj;
 	            
-	            ArrayList<Comment> commentList = new ServiceComments().getComments(Integer.parseInt(json.get("id").toString()));
-            	
-	            Droid droid = new Droid(
-	            	Integer.parseInt(json.get("id").toString()), //id
-	            	Integer.parseInt(json.get("quantity").toString()), //quantity
-	            	Double.parseDouble(json.get("list_price").toString()), //price
-	            	json.get("name").toString(), //name
-	            	json.get("description_purchase").toString(), //description
-	            	json.get("img_name").toString(), //image name
-	            	commentList, //comments list
-	            	json.get("img_name_promo").toString(), //promoImgName
-	            	Boolean.valueOf(json.get("combat").toString()), //combat
-	            	Boolean.valueOf(json.get("cook").toString()), //cook
-	            	Boolean.valueOf(json.get("garden").toString()), //garden
-	            	Boolean.valueOf(json.get("laundry").toString()), //laundry
-	            	Boolean.valueOf(json.get("clean").toString()), //clean
-	            	Boolean.valueOf(json.get("wash_dishes").toString())); //washDishes
-	            
-	            return droid;
-	        }
+	        ArrayList<Comment> commentList = new ServiceComments().getComments(Integer.parseInt(json.get("id").toString()));
+        	
+	        int quantity;
+	        if (json.get("quantity") == null)
+	        	quantity = 0;
+	        else
+	        	quantity = Integer.parseInt(json.get("quantity").toString());
 	        
+            Droid droid = new Droid(
+            	Integer.parseInt(json.get("id").toString()), //id
+            	quantity, //quantity
+            	Double.parseDouble(json.get("list_price").toString()), //price
+            	json.get("name").toString(), //name
+            	json.get("description_purchase").toString(), //description
+            	json.get("img_name").toString(), //image name
+            	commentList, //comments list
+            	json.get("img_name_promo").toString(), //promoImgName
+            	Boolean.valueOf(json.get("combat").toString()), //combat
+            	Boolean.valueOf(json.get("cook").toString()), //cook
+            	Boolean.valueOf(json.get("garden").toString()), //garden
+            	Boolean.valueOf(json.get("laundry").toString()), //laundry
+            	Boolean.valueOf(json.get("clean").toString()), //clean
+            	Boolean.valueOf(json.get("wash_dishes").toString())); //washDishes
+            
+            return droid;
+        
 	    } catch(ParseException pe) {
 	    	  
 	        System.out.println("position: " + pe.getPosition());

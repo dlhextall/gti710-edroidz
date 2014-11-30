@@ -50,7 +50,7 @@
         </div>
     
         <!-- feature info -->
-        <div id="featuredInfo" class="container">
+        <div id="featuredInfo" class="container espace">
         	<div class='col-md-3'></div>
             <div class='col-md-6'>
            		<div class="row">

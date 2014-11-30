@@ -31,7 +31,7 @@
 	                <p>${ checkoutForm.postalCode }</p>
 	        	</div>
 	        	
-	        	<div class="row">
+	        	<div class="row espace">
 	            	<h2>Vos achats</h2>
 		      		<form class="form-horizontal" role="form">
 		          		<table class="table table-hover">

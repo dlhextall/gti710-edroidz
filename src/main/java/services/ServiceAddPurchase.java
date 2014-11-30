@@ -11,7 +11,7 @@ public class ServiceAddPurchase {
 	public void addPurchase(Panier panier)
 	{
 		ServiceHttpUrlConnection http = new ServiceHttpUrlConnection();
-		String url = "http://127.0.0.1:8000/sales/add/";
+		String url = "http://127.0.0.1:8000/sales/add";
 		
 		BigDecimal taxes = panier.getTpsRound().add(panier.getTvqRound());
 		
