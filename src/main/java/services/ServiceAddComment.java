@@ -11,6 +11,6 @@ public class ServiceAddComment {
 		
 		String url = "http://127.0.0.1:8000/products/get/" + comment.getProductId() + "/comments/add";
 		ServiceHttpUrlConnection http = new ServiceHttpUrlConnection();		
-		http.sendPost(url, urlParameters);
+		String nope = http.sendPost(url, urlParameters);
 	}
 }

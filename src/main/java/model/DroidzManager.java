@@ -3,7 +3,6 @@ package model;
 import java.util.ArrayList;
 
 import services.ServiceAddComment;
-import services.ServiceAddAllProducts;
 import services.ServiceAddPartner;
 import services.ServiceAddPurchase;
 import services.ServiceDroid;
@@ -21,32 +20,30 @@ public class DroidzManager implements ManagerInterface
 	public static DroidzManager getInstance()
 	{
 		if (instance == null) {
-			//new ServiceAddAllProducts().addAllProducts();
-			//new ServiceAddAllProducts().addAllComments();
 			instance = new DroidzManager();
 		}
 		return instance;
 	}
 	
 	public ArrayList<Droid> getDroidListAt(String filtre){
-		//return new ServiceDroidList().getDroidListFiltre(filtre);
-		return getDroidListFiltre(filtre);		
+		return new ServiceDroidList().getDroidListFiltre(filtre);
+		//return getDroidListFiltre(filtre);		
 	}
 
 	public ArrayList<Droid> getDroidList() {
-		//return new ServiceDroidList().getService();
-		return droidList;
+		return new ServiceDroidList().getService();
+		//return droidList;
 	}
 	
 	public ArrayList<Droid> getPromoList() {
-		//return new ServiceDroidList().getPromoList();
-		return promoList;
+		return new ServiceDroidList().getPromoList();
+		//return promoList;
 	}
 
 	public Droid getDroid(int droidId)
 	{
-		//return new ServiceDroid().getService(droidId);
-		
+		return new ServiceDroid().getService(droidId);
+		/*
 		for (int i = 0; i < droidList.size(); i++)
 		{
 			if (droidList.get(i).getId() == droidId)
@@ -55,7 +52,7 @@ public class DroidzManager implements ManagerInterface
 			}
 		}
 		
-		return null;
+		return null;*/
 	}
 
 	public void addComment(int droidId, int score, String description)
@@ -70,11 +67,11 @@ public class DroidzManager implements ManagerInterface
 	@Override
 	public String pay(CheckoutForm checkoutForm, Panier panier) {
 		
-		new ServiceAddPartner().addPartner(checkoutForm);
-		//new ServiceAddPurchase().addPurchase(panier);
+		ArrayList<Integer> partnerIds = new ServiceAddPartner().addPartner(checkoutForm);
+		int purchaseId = new ServiceAddPurchase().addPurchase(panier, partnerIds.get(0), partnerIds.get(1));
 		
-		//Ajouter le numero de confirmation dans la bd???
-		return "NH67DA92JB8M";
+		//id de la purchase
+		return String.valueOf(purchaseId + "NHZ2L0D34");
 	}
 	
 	 

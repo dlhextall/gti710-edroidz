@@ -28,8 +28,8 @@ public class ServiceHttpUrlConnection {
 			con.setRequestProperty("User-Agent", USER_AGENT);
 	 
 			int responseCode = con.getResponseCode();
-			System.out.println("\nSending 'GET' request to URL : " + url);
-			System.out.println("Response Code : " + responseCode);
+			//System.out.println("\nSending 'GET' request to URL : " + url);
+			//System.out.println("Response Code : " + responseCode);
 	 
 			BufferedReader in = new BufferedReader(
 			        new InputStreamReader(con.getInputStream()));
@@ -53,7 +53,7 @@ public class ServiceHttpUrlConnection {
  
 	// HTTP POST request
 	@SuppressWarnings("restriction")
-	public void sendPost(String url, String urlParameters) {
+	public String sendPost(String url, String urlParameters) {
 		
 		try {
 			
@@ -90,9 +90,12 @@ public class ServiceHttpUrlConnection {
 	 
 			//print result
 			System.out.println(response.toString()); 
+			return response.toString();
 		
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		
+		return null;
 	} 
 }
