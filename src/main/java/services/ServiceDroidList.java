@@ -97,9 +97,8 @@ public class ServiceDroidList {
 	    return droidList;
 	}
 	
-	public ArrayList<Droid> getPromoList()
+	public ArrayList<Droid> getPromoList(ArrayList<Droid> droidList)
 	{
-		ArrayList<Droid> droidList = getService();
 		ArrayList<Droid> promo = new ArrayList<Droid>();
 		
 		for (int i = 0; i < droidList.size(); i++) 
@@ -111,9 +110,8 @@ public class ServiceDroidList {
 		return promo;
 	}
 	
-	public ArrayList<Droid> getDroidListFiltre(String filtre)
+	public ArrayList<Droid> getDroidListFiltre(ArrayList<Droid> droidList, String filtre)
 	{
-		ArrayList<Droid> droidList = getService();
 		ArrayList<Droid> filteredList = new ArrayList<Droid>();
 		
 		for (int i = 0; i < droidList.size(); i++) 
